@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keiware Music - Canciones Personalizadas con IA</title>
+  <meta name="description" content="Canciones únicas creadas con inteligencia artificial y artistas digitales. Ideal para regalos, bodas, cumpleaños y más.">
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Keiware Music - Canciones Personalizadas con IA" />
+  <meta property="og:description" content="Canciones únicas creadas con inteligencia artificial y artistas digitales." />
+  <meta property="og:image" content="img/preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
+  <!-- Fuente elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/521234567890?text=Hola,%20quiero%20contratar%20una%20canción%20personalizada." 
+   target="_blank" 
+   class="whatsapp-flotante" 
+   id="whatsappFlotante"
+   aria-label="Contactar por WhatsApp">
+  <span>💬</span>
+</a>
+<body>
+
+  <!-- Menú superior -->
+  <header class="navbar">
+    <div class="logo">Keiware Music</div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#ofrecemos">¿Qué ofrecemos?</a>
+      <a href="#muestras">Muestras</a>
+      <a href="#planes">Planes</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Banner carrusel -->
+  <section class="carrusel" id="inicio">
+    <div class="carrusel-contenedor" id="carruselContenedor">
+      <img src="img/banners/banner1.jpg" alt="Banner 1" onclick="window.location='ban1.html'">
+      <img src="img/banners/banner2.jpg" alt="Banner 2" onclick="window.location='ban2.html'">
+      <img src="img/banners/banner3.jpg" alt="Banner 3" onclick="window.location='ban3.html'">
+      <img src="img/banners/banner4.jpg" alt="Banner 4" onclick="window.location='ban4.html'">
+      <img src="img/banners/banner5.jpg" alt="Banner 5" onclick="window.location='ban5.html'">
+    </div>
+    <div class="carrusel-controles">
+      <span class="carrusel-btn" onclick="cambiarCarrusel(-1)">‹</span>
+      <span class="carrusel-btn" onclick="cambiarCarrusel(1)">›</span>
+    </div>
+  </section>
+
+  <!-- Presentación -->
+  <section class="seccion">
+    <h2><span class="icono">🎵</span> Canciones Personalizadas con IA</h2>
+    <div class="dos-columnas">
+      <div class="col-img">
+        <img src="img/icono-ia.png" alt="Icono IA">
+      </div>
+      <div class="col-texto">
+        <p>Una canción personalizada te brinda la oportunidad de convertir tus emociones e ideas en melodías únicas y originales, creadas especialmente para ti o para quien más amas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Qué ofrecemos? -->
+  <section class="seccion" id="ofrecemos">
+    <h2>¿Qué ofrecemos?</h2>
+    <p>Creamos canciones desde cero usando inteligencia artificial avanzada, letristas expertos y voces de artistas digitales únicos. Ofrecemos:</p>
+    <ul>
+      <li>✅ Catálogo de géneros: pop, balada, rock suave, electrónica, regional, etc.</li>
+      <li>✅ Voces masculinas y femeninas con distintas emociones (alegría, nostalgia, pasión)</li>
+      <li>✅ Duración promedio: 2:30 a 3:30 minutos</li>
+      <li>✅ Revisión ilimitada de letra hasta que quedes 100% satisfecho</li>
+      <li>✅ Entrega por WhatsApp en formato MP3 de alta calidad</li>
+      <li>✅ Opción de video musical con animación o fotos (adicional)</li>
+    </ul>
+
+    <!-- Enlace a artistas digitales -->
+    <div class="artistas-enlace">
+      <h3>Conoce a nuestros Artistas Digitales</h3>
+      <div class="collage-artistas">
+        <img src="img/artistas/artist1.jpg" alt="Artista 1" onclick="window.location='artistas-digitales.html'">
+        <img src="img/artistas/artist2.jpg" alt="Artista 2" onclick="window.location='artistas-digitales.html'">
+        <img src="img/artistas/artist3.jpg" alt="Artista 3" onclick="window.location='artistas-digitales.html'">
+      </div>
+      <p><a href="artistas-digitales.html">Explora todos los perfiles →</a></p>
+    </div>
+  </section>
+
+  <!-- Muestras -->
+  <section class="seccion" id="muestras">
+    <h2>Muestras de Canciones</h2>
+    <p>Escucha demos reales creados por Keiware Music. Solo un audio a la vez para mejor experiencia.</p>
+    
+    <div class="tabla-muestras">
+      <!-- Fila 1 -->
+      <div class="muestra">
+        <img src="img/muestras/muestra1.jpg" alt="Boda">
+        <h3>Boda de Clara</h3>
+        <audio controls id="audio1">
+          <source src="audios/muestra1.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra">
+        <img src="img/muestras/muestra2.jpg" alt="Cumpleaños">
+        <h3>Cumple Papá</h3>
+        <audio controls id="audio2">
+          <source src="audios/muestra2.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra">
+        <img src="img/muestras/muestra3.jpg" alt="Aniversario">
+        <h3>25 Años Juntos</h3>
+        <audio controls id="audio3">
+          <source src="audios/muestra3.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="muestra">
+        <img src="img/muestras/muestra4.jpg" alt="Graduación">
+        <h3>Graduación 2024</h3>
+        <audio controls id="audio4">
+          <source src="audios/muestra4.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra">
+        <img src="img/muestras/muestra5.jpg" alt="Amistad">
+        <h3>Amigos de Siempre</h3>
+        <audio controls id="audio5">
+          <source src="audios/muestra5.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra">
+        <img src="img/muestras/muestra6.jpg" alt="San Valentín">
+        <h3>San Valentín</h3>
+        <audio controls id="audio6">
+          <source src="audios/muestra6.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <!-- Fila 3 -->
+      <div class="muestra">
+        <img src="img/muestras/muestra7.jpg" alt="Bienvenida">
+        <h3>Bienvenida al Bebé</h3>
+        <audio controls id="audio7">
+          <source src="audios/muestra7.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra">
+        <img src="img/muestras/muestra8.jpg" alt="Despedida">
+        <h3>Despedida Laboral</h3>
+        <audio controls id="audio8">
+          <source src="audios/muestra8.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra">
+        <img src="img/muestras/muestra9.jpg" alt="Homenaje">
+        <h3>Homenaje a Mamá</h3>
+        <audio controls id="audio9">
+          <source src="audios/muestra9.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planes -->
+  <section class="seccion" id="planes">
+    <h2>Nuestros Planes</h2>
+    <div class="planes-contenedor">
+      <div class="plan">
+        <h3>Express</h3>
+        <ul>
+          <li>Letra básica</li>
+          <li>1 voz estándar</li>
+          <li>Entrega en 72h</li>
+          <li>Sin revisiones</li>
+        </ul>
+        <div class="precio">$29</div>
+      </div>
+      <div class="plan">
+        <h3>Estándar</h3>
+        <ul>
+          <li>Letra personalizada</li>
+          <li>2 voces a elegir</li>
+          <li>Entrega en 5 días</li>
+          <li>2 revisiones</li>
+        </ul>
+        <div class="precio">$59</div>
+      </div>
+      <div class="plan premium">
+        <h3>Premium</h3>
+        <ul>
+          <li>Letra premium + metáforas</li>
+          <li>Acceso a todos los artistas digitales</li>
+          <li>Entrega en 7 días</li>
+          <li>Revisiones ilimitadas</li>
+          <li>Video musical incluido</li>
+        </ul>
+        <div class="precio">$129</div>
+      </div>
+      <div class="plan">
+        <h3>BGM</h3>
+        <ul>
+          <li>Solo instrumental</li>
+          <li>Sin voz</li>
+          <li>Para videos, podcasts</li>
+          <li>Entrega en 48h</li>
+        </ul>
+        <div class="precio">$19</div>
+      </div>
+    </div>
+  </section>
+
+<!-- Botón de contratación -->
+<div class="contrata-boton">
+  <a href="https://wa.me/521234567890?text=Hola,%20quiero%20contratar%20una%20canción%20personalizada." 
+     target="_blank" 
+     class="boton-whatsapp">
+    <span>📱</span> ¡Contrata ahora!
+  </a>
+</div>
+
+
+  <!-- FAQ -->
+  <section class="seccion" id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3>❓ ¿Puedo elegir el género y la voz?</h3>
+      <div class="faq-respuesta">
+        <p>Sí, tienes acceso a nuestro catálogo de géneros y artistas digitales con distintas emociones y estilos.</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3>❓ ¿Cuánto tiempo tardan en hacer la canción?</h3>
+      <div class="faq-respuesta">
+        <p>Depende del plan: desde 48 horas (Express) hasta 7 días (Premium).</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3>❓ ¿Puedo usar la canción comercialmente?</h3>
+      <div class="faq-respuesta">
+        <p>Los planes Premium incluyen licencia comercial. Los demás son para uso personal.</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3>❓ ¿Y si no me gusta el resultado?</h3>
+      <div class="faq-respuesta">
+        <p>Ofrecemos revisiones según tu plan. En Premium, hasta que quedes 100% satisfecho.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section class="seccion" id="nosotros">
+    <h2>Nosotros</h2>
+    <p>Keiware Music nació en 2022 con una misión: democratizar la creación musical personalizada. Hoy, servimos a clientes en más de 15 países, desde México hasta Japón.</p>
+    <p>Nuestro equipo incluye letristas premiados, ingenieros de sonido con experiencia en estudios profesionales, y una red de artistas digitales únicos, cada uno con su propia "personalidad emocional".</p>
+    <p>Usamos software profesional como Ableton Live, Melodyne y modelos de IA de última generación para garantizar calidad de estudio en cada entrega.</p>
+  </section>
+
+  <!-- Contacto -->
+  <section class="seccion" id="contacto">
+    <h2>Contacto</h2>
+    <div class="contacto-info">
+      <p>📱 WhatsApp: +52 123 456 7890</p>
+      <p>✉️ Email: hola@keiwaremusic.com</p>
+      <p>📞 Teléfono: +52 (55) 1234-5678</p>
+      <div class="redes">
+        <a href="#">Instagram</a> •
+        <a href="#">TikTok</a> •
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Keiware Music. Todos los derechos reservados.</p>
+    <p>
+      <a href="politica-privacidad.html">Política de Privacidad</a> •
+      <a href="#">Términos de Servicio</a> •
+      <a href="#">Aviso de Cookies</a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
