@@ -84,6 +84,15 @@ body {
   color: var(--rosa);
 }
 
+.logo2 {
+  margin: 0px;
+  display: flex;
+  font-weight: 100;
+  font-size: 0.4em;
+  color: var(--rosa);
+  padding: 0px;
+}
+
 .nav-menu {
   display: flex;
   gap: 20px;
