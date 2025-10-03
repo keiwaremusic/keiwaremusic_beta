@@ -55,7 +55,7 @@ html {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1em;
   padding: 12px 28px;
   border-radius: 30px;
   text-decoration: none;
@@ -251,6 +251,102 @@ body {
   width: 100%;
   max-width: 200px;
   border-radius: 10px;
+}
+
+/* Artistas: centrar enlace y collage de imágenes */
+.artistas-enlace {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra contenido horizontalmente */
+  text-align: center;  /* asegura textos centrados dentro */
+  margin-top: 12px;
+  max-width: 1150px; /* coincide con el ancho máximo usado en .seccion y .carrusel */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collage-artistas {
+  display: flex;
+  gap: 12px;
+  justify-content: center; /* centra las miniaturas */
+  align-items: flex-start; /* alinea arriba para que captions de distinta altura no desplacen */
+  margin-top: 12px;
+  flex-wrap: wrap; /* que quepan en pantallas pequeñas */
+}
+
+.collage-artistas img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.collage-artistas img:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 480px) {
+  .collage-artistas img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collage-artistas {
+    align-items: center; /* en móviles, centramos verticalmente para mejor equilibrio */
+  }
+}
+
+/* Estilos para tarjetas de artista (figure + figcaption dentro de enlace) */
+.artista-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.artista-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 200px; /* coincide con el tamaño de las imágenes */
+}
+
+.artista-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.artista-item figcaption {
+  font-size: 0.95em;
+  color: #e6e6e6;
+  line-height: 1.2;
+}
+
+.artista-item .genero {
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.artista-item .bio {
+  font-size: 0.9em;
+  color: #d6d6d6;
+}
+
+@media (max-width: 480px) {
+  .artista-item, .artista-item img {
+    width: 100px;
+    height: 100px;
+  }
+  .artista-item figcaption {
+    font-size: 0.8em;
+  }
 }
 
 /* Muestras */
