@@ -149,7 +149,7 @@ body {
 /* Carrusel */
 .carrusel {
   position: relative;
-  height: 400px;
+  height: 200px;
   overflow: hidden;
   margin: 20px auto;
   max-width: 1150px;
@@ -176,7 +176,7 @@ body {
 
 .carrusel-controles {
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -186,7 +186,7 @@ body {
 .carrusel-btn {
   background: rgba(0,0,0,0.5);
   color: white;
-  padding: 8px 15px;
+  padding: 4px 10px;
   cursor: pointer;
   border-radius: 4px;
 }
