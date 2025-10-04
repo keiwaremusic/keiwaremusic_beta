@@ -191,6 +191,42 @@ body {
   border-radius: 4px;
 }
 
+/* Indicador de progreso debajo del carrusel */
+.carrusel-progreso {
+  max-width: 1150px;
+  width: 100%;
+  margin: 8px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+/* Play/pause button removed - styles cleaned up */
+
+/* Visual hint: cuando el usuario hace hover sobre la imagen se considera 'pausa' */
+.carrusel:hover .carrusel-progreso .progreso-fill {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
+}
+
+.progreso-barra {
+  flex: 1 1 auto;
+  height: 3px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progreso-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--azul), var(--rosa));
+  transition: width 0.2s linear;
+}
+
+/* label removed: no visual seconds counter */
+
 /* Secciones */
 .seccion {
   max-width: 1150px;

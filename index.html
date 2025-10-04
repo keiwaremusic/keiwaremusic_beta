@@ -59,7 +59,13 @@
     </div>
     <div class="carrusel-controles">
       <span class="carrusel-btn" onclick="cambiarCarrusel(-1)">‹</span>
-      <span class="carrusel-btn" onclick="cambiarCarrusel(1)">›</span>
+  <span class="carrusel-btn" onclick="cambiarCarrusel(1)">›</span>
+    </div>
+    <!-- Indicador de progreso: barra y contador de segundos -->
+    <div class="carrusel-progreso" aria-hidden="false">
+      <div class="progreso-barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progreso-fill" id="progresoFill"></div>
+      </div>
     </div>
   </section>
 
