@@ -283,8 +283,12 @@ body {
 }
 
 .col-img img {
-  width: 100%;
-  max-width: 200px;
+  width: 110px;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-width: 110px;
   border-radius: 10px;
 }
 
@@ -328,6 +332,13 @@ body {
   .collage-artistas img {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-img img {
+    width: 80px;
+    height: 180px;
   }
 }
 
