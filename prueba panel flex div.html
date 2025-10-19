@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Artistas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+/*      height: 100vh;*/
+    }
+
+    .left-panel {
+      width: 380px;
+  max-height: 100vh;
+	height: 450px;
+      background-color: #111;
+      padding: 10px;
+      overflow-y: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 110px);
+/*      display: flex;  */
+/*      flex-direction: column; */
+      gap: 10px;
+	box-sizing: border-box;
+	align-items: top;
+
+}
+
+    .left-panel img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+	border: 1px solid white;
+    }
+
+    .left-panel img:hover,
+    .left-panel img.active {
+      border: 2px solid #00f0ff;
+    }
+
+    .right-panel {
+      flex: 1;
+      padding: 20px;
+      background-color: #54f4f4;
+      overflow-y: auto;
+    }
+
+    .artist-info {
+      display: none;
+    }
+
+    .artist-info.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-panel">
+    <img src="artist1.jpg" alt="Artista 1" data-artist="1" />
+    <img src="artist2.jpg" alt="Artista 2" data-artist="2" />
+    <img src="artist3.jpg" alt="Artista 3" data-artist="3" />
+    <img src="artist1.jpg" alt="Artista 1" data-artist="1" />
+    <img src="artist2.jpg" alt="Artista 2" data-artist="2" />
+    <img src="artist3.jpg" alt="Artista 3" data-artist="3" />
+    <img src="artist1.jpg" alt="Artista 1" data-artist="1" />
+    <img src="artist2.jpg" alt="Artista 2" data-artist="2" />
+    <img src="artist2.jpg" alt="Artista 2" data-artist="2" />
+    <img src="artist2.jpg" alt="Artista 2" data-artist="2" />
+    <!-- Agrega hasta 12 imágenes -->
+  </div>
+
+  <div class="right-panel">
+    <div id="artist-1" class="artist-info active">
+      <h2>Artista 1</h2>
+      <p>Descripción del artista 1, su estilo, su historia, etc.</p>
+    </div>
+    <div id="artist-2" class="artist-info">
+      <h2>Artista 2</h2>
+      <p>Descripción del artista 2, su estilo, su historia, etc.</p>
+    </div>
+    <div id="artist-3" class="artist-info">
+      <h2>Artista 3</h2>
+      <p>Descripción del artista 3, su estilo, su historia, etc.</p>
+    </div>
+    <!-- Agrega más bloques según los artistas -->
+  </div>
+
+  <script>
+    const thumbnails = document.querySelectorAll('.left-panel img');
+    const artistInfos = document.querySelectorAll('.artist-info');
+
+    thumbnails.forEach(img => {
+      img.addEventListener('click', () => {
+        // Quitar clase activa de todas las imágenes
+        thumbnails.forEach(i => i.classList.remove('active'));
+        img.classList.add('active');
+
+        // Mostrar solo la info del artista seleccionado
+        const id = img.dataset.artist;
+        artistInfos.forEach(info => {
+          info.classList.remove('active');
+        });
+        document.getElementById(`artist-${id}`).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

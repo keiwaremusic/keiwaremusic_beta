@@ -1,0 +1,1442 @@
+Código HTML de la página singersteam.html:
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keiware Music - Canciones Personalizadas con IA - SingersTeam</title>
+  <meta name="description" content="Canciones únicas creadas con inteligencia artificial y artistas digitales. Ideal para regalos, bodas, cumpleaños y más.">
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Keiware Music - Canciones Personalizadas con IA - SingersTeam" />
+  <meta property="og:description" content="Canciones únicas creadas con inteligencia artificial y artistas digitales." />
+  <meta property="og:image" content="img/preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+
+  <!-- Fuente elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Fuente Merriweather -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+  <!-- Fuente Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/estilo.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/singersteam.css" /> <!-- Estilo para control de tarjeta de artista -->
+
+  <style>
+/*    body { 
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;*/
+/*      height: 100vh;*/
+/*    }*/
+
+
+    .panel-derecho {
+      flex: 1;
+      padding: 20px;
+      background-color: #54f4f4;
+      overflow-y: auto;
+    }
+
+    .artist-info {
+      display: none;
+    }
+
+    .artist-info.active {
+      display: block;
+    }
+  </style>
+
+</head>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20una%20canción%20personalizada." 
+   target="_blank" 
+   class="whatsapp-flotante" 
+   id="whatsappFlotante"
+   aria-label="Contactar por WhatsApp">
+  <span>💬</span>
+</a>
+<body class="artistas-body">
+
+  <!-- Menú superior -->
+  <header class="navbar">
+    <!-- <div class="logo"><img src="img/logo_keiwaremusic_66.png" alt="Keiware Music" height="50px"></div> -->
+    <div class="logo2"><img src="img/logo_keiwaremusic_66.png" alt="Keiware Music" height="50px"></div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Página principal</a>
+      <a href="#presentacion">Presentación</a>
+      <a href="#singersteam">SingersTeam</a>
+      <a href="#muestras">Muestras</a>
+      <a href="#planes">Planes</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Banner carrusel -->
+<!--
+  <section class="carrusel" id="inicio">
+    <div class="carrusel-contenedor" id="carruselContenedor">
+      <img src="img/banners/banner1.jpg" alt="Banner 1" onclick="window.location='ban1.html'">
+      <img src="img/banners/banner2.jpg" alt="Banner 2" onclick="window.location='ban2.html'">
+      <img src="img/banners/banner3.jpg" alt="Banner 3" onclick="window.location='ban3.html'">
+    </div>
+    <div class="carrusel-controles">
+      <span class="carrusel-btn" onclick="cambiarCarrusel(-1)">‹</span>
+  <span class="carrusel-btn" onclick="cambiarCarrusel(1)">›</span>
+    </div>
+-->
+    <!-- Indicador de progreso: barra y contador de segundos -->
+<!--
+    <div class="carrusel-progreso" aria-hidden="false">
+      <div class="progreso-barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progreso-fill" id="progresoFill"></div>
+      </div>
+    </div>
+  </section>
+-->
+  <!-- Presentación -->
+  <section class="seccion" id="presentacion">
+    <div style="text-align: center;"><img src="img/artistas/Singers Team logo.png"></div>
+    <h2><img src="img/viñetas/secc_canciones.png" alt="Viñeta" class="titulo-vineta"> Artistas Digitales</h2>
+    <div class="dos-columnas">
+      <div class="col-img">
+        <img src="img/viñetas/artistas_digitales.jpg" alt="Icono Artistas Digitales">
+      </div>
+      <div class="col-texto">
+        <p>Presentamos a nuestros artistas digitales, para una experiencia mejorada en la selección del estilo musical y tono de voz deseado para tus canciones personalizadas. <div class="BRChico"><br></div>
+          Cada uno tiene un nombre elegido no precisamente al azar, sino que simboliza el estilo musical que ofrece. Sus breves biografías sirvieron de base
+          para crear calidez y potencia vocal, resultando así, en una voz única.<div class="BRChico"><br></div>
+          Te invitamos a recorrer las breves historias de cada artista y a escuchar algunos de sus demos que hemos creado. Estamos seguros que encontrarás al artista ideal para tu próxima canción personalizada.<div class="BRChico"><br></div>
+          No olvides elegir el Plan Premium, para tener acceso a este catálogo de extraordinarias voces únicas.<br>
+          Los nombres, biografías y apariencia de los artistas sin ficticios, creados con IA para este proyecto.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WWWWWWWWWWWWWWWWWWWW TABLA ARTISTAS WWWWWWWWWWWWWWWWWWWW -->
+  <section class="tabla-artistas">  <!-- X.X.X.X.X Reducir el espacio debajo -->
+    <h2><img src="img/viñetas/secc_singersteam.png" alt="Viñeta" class="titulo-vineta"> SingersTeam</h2>
+  </section>  
+  <section class="tabla-artistas">
+    <div class="panel-izquierdo"> <!-- Columna/cuadricula izquierda de las fotos minis -->
+        <img src="img/artistas/ana_hash-mini.jpg" alt="Ana Hash" data-artist="1">
+        <img src="img/artistas/fernando_del_real-mini.jpg" alt="Fernando Del Real" data-artist="2">
+        <img src="img/artistas/marisela_reina-mini.jpg" alt="Marisela Reina" data-artist="3">
+        <img src="img/artistas/lyra_skye-mini.jpg" alt="Lyra Skye" data-artist="4">
+        <img src="img/artistas/alba_y_nancy_lusan-mini.jpg" alt="Artista 5" data-artist="5">
+        <img src="img/artistas/alba_y_nancy_lusan-mini.jpg"> <img src="img/artistas/alba_y_nancy_lusan-mini.jpg">
+        <img src="img/artistas/alba_y_nancy_lusan-mini.jpg"> <img src="img/artistas/alba_y_nancy_lusan-mini.jpg">
+        <img src="img/artistas/alba_y_nancy_lusan-mini.jpg"> <img src="img/artistas/alba_y_nancy_lusan-mini.jpg">
+        <img src="img/artistas/alba_y_nancy_lusan-mini.jpg"> <img src="img/artistas/alba_y_nancy_lusan-mini.jpg">
+      </div>
+    
+    <div class="panel-derecho">
+      <div id="artist-1" class="artist-info active">
+        <h2>Artista 1</h2>
+        <p>Descripción del artista 1, su estilo, su historia, etc.</p>
+      </div>
+      <div id="artist-2" class="artist-info">
+        <h2>Artista 2</h2>
+        <p>Descripción del artista 2, su estilo, su historia, etc.</p>
+      </div>
+      <div id="artist-3" class="artist-info">
+        <h2>Artista 3</h2>
+        <p>Descripción del artista 3, su estilo, su historia, etc.</p>
+      </div>
+    <!-- Agrega más bloques según los artistas -->
+    </div>
+  </section>
+
+  <!-- Enlace a artistas digitales -->
+  <section class="seccion" id="singersteam">
+    <h2><img src="img/viñetas/secc_singersteam.png" alt="Viñeta" class="titulo-vineta"> SingersTeam</h2>
+    <div class="artistas-enlace">      
+      <h3>Pulsa sobre cualquier artista, para expandir su biografía y algunos de sus demos</h3>
+      <div class="collage-artistas">
+        <img src="img/artistas/alba_y_nancy_lusan-mini.jpg" alt="Alba y Nancy Lusán" title="Alba y Nancy Lusán"
+          class="artist-thumb" data-id="1">
+        <img src="img/artistas/ana_hash-mini.jpg" alt="Ana Hash" title="Ana Hash"
+          title="Eduardo Montiel" class="artist-thumb" data-id="2">
+        <img src="img/artistas/eduardo_montiel-mini.jpg" alt="Eduardo Montiel"
+          class="artist-thumb" data-id="3">
+        <img src="img/artistas/fernando_del_real-mini.jpg" alt="Fernando Del Real" title="Fernando Del Real"
+          class="artist-thumb" data-id="4">
+        <img src="img/artistas/la_pulga_cosmica-mini.jpg" alt="La Pulga Cósmica" title="La Pulga Cósmica"
+          class="artist-thumb" data-id="5">
+        <img src="img/artistas/lia_vega-mini.jpg" alt="Lía Vega" title="Lía Vega"
+          class="artist-thumb" data-id="6">
+          <img src="img/artistas/los_skamales_verdes-mini.jpg" alt="Los Skamales Verdes" title="Los Skamales Verdes"
+          class="artist-thumb" data-id="7">
+        <img src="img/artistas/lucio_varela-mini.jpg" alt="Lucio Varela" title="Lucio Varela"
+          class="artist-thumb" data-id="8">
+        <img src="img/artistas/lyra_skye-mini.jpg" alt="Lyra Skye" title="Lyra Skye"
+          class="artist-thumb" data-id="9">
+        <img src="img/artistas/marisela_reina-mini.jpg" alt="Marisela Reina" title="Marisela Reina"
+          class="artist-thumb" data-id="10">
+        <img src="img/artistas/matias_soto-mini.jpg" alt="Matias Soto" title="Matias Soto"
+          class="artist-thumb" data-id="11">
+        <img src="img/artistas/skaffold-mini.jpg" alt="Skaffold" title="Skaffold"
+          class="artist-thumb" data-id="12">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="" style="border: 1px white solid">
+    <div id="artist-detail" class="hidden">
+      <img id="detail-photo" src="" alt="Foto del artista">
+      <h2 id="detail-name"></h2>
+      <p id="detail-bio"></p>
+      <p id="detail-genres"></p>
+      <div id="detail-audio-container"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- WWWWWWWWWWWWWWWWWWWWWWWWWWW  DEMOS  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW -->
+  <!-- Muestras -->
+  <section class="seccion" id="muestras">
+    <h2><img src="img/viñetas/secc_demos.png" alt="Viñeta" class="titulo-vineta"> Muestras de Canciones</h2>
+    <p>Escucha algunos de nuestros demos promocionales y para clientes, en diversos  <span id="abrirModalEstilos" class="estilos-musicales">estilos musicales</span> ← da click para ver la lista completa de estilos</p>    
+    <div class="tabla-muestras">
+      <!-- Fila 1 -->
+      <div class="muestra"> <!-- Demo 1 -->
+        <img src="img/muestras/hermosa_fantasia.jpg" alt="Hermosa Fantasía">
+        <div class="Titulo-Demo">Hermosa fantasía</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Fernando Del Real</a></li>
+          <li><span class="texto-italica">Estilo: </span>Disco, Pop 70s</li>
+          <li><span class="texto-italica">Duración original: </span>3:45 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Un joven de preparatoria recuerda a su amor del colegio</li>
+        </ul>
+        <audio controls id="audio1">
+          <source src="audios/Hermosa_Fantasía-Fernando_Del_Real-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra"> <!-- Demo 2 -->
+        <img src="img/muestras/sala_vacia.jpg" alt="Sala Vacía">
+        <div class="Titulo-Demo">Sala Vacía</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Lucio Varela</a></li>
+          <li><span class="texto-italica">Estilo: </span>Balada, guitarra</li>
+          <li><span class="texto-italica">Duración original: </span>2:36 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Melancolía de un hombre con sentimientos de incomprensión</li>
+        </ul>
+        <audio controls id="audio2">
+          <source src="audios/Sala_Vacia-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="muestra"> <!-- Demo 3 -->
+        <img src="img/muestras/pensamiento_fugaz.jpg" alt="Pensamiento fugáz">
+        <div class="Titulo-Demo">Pensamiento fugáz</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Marisela Reina</a></li>
+          <li><span class="texto-italica">Estilo: </span>Ranchera / Mariachi</li>
+          <li><span class="texto-italica">Duración original: </span>3:52 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>El anhelo de una mujer que desea ser recordada y valorada</li>
+        </ul>
+        <audio controls id="audio3">
+          <source src="audios/Pensamiento_Fugaz-Marisela_Reina-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="muestra"> <!-- Demo 4 -->
+        <img src="img/muestras/entre_libros_y_madrugadas.jpg" alt="Entre libros y madrugadas">
+        <div class="Titulo-Demo">Entre libros y madrugadas</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Matías Soto</a></li>
+          <li><span class="texto-italica">Estilo: </span>Rock progresivo</li>
+          <li><span class="texto-italica">Duración original: </span>4:44 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Reconocimiento de los padres a su hijo recién graduado</li>
+        </ul>
+        <audio controls id="audio4">
+          <source src="audios/Entre_Libros_y_Madrugadas-Matías_Soto-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="muestra"> <!-- Demo 5 -->
+        <img src="img/muestras/vamos_a_celebrar_tropical.jpg" alt="Vamos a Celebrar (Tropical)">
+        <div class="Titulo-Demo">Vamos a Celebrar (Tropical)</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span>Varios (acento caribeño)</li>
+          <li><span class="texto-italica">Estilo: </span>Calypso / Tropical / Fiesta</li>
+          <li><span class="texto-italica">Duración original: </span>2:35 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Alegre canción grupal para cumpleaños, con toque tropical</li>
+        </ul>
+        <audio controls id="audio5">
+          <source src="audios/Vamos_a_Celebrar_Tropical-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="muestra"> <!-- Demo 6 -->
+        <img src="img/muestras/eres_mi_razon.jpg" alt="Eres Mi Razón">
+        <div class="Titulo-Demo">Eres Mi Razón</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span>Voz masculina</li>
+          <li><span class="texto-italica">Estilo: </span>Balada romántica</li>
+          <li><span class="texto-italica">Duración original: </span>4:15 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Dedicatoria y reconocimiento románticos de un joven a su pareja</li>
+        </ul>
+        <audio controls id="audio6">
+          <source src="audios/Eres_Mi_Razon_KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+<!-- Pienso que una mejora sería usar iconos para identificar voz, géneros y estilos -->
+
+<!-- Fila 3 -->
+      <div class="muestra"> <!-- Demo 7 -->
+        <img src="img/muestras/amor_imposible.jpg" alt="Amor Imposible">
+        <div class="Titulo-Demo">Amor Imposible</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Lía Vega</a></li>
+          <li><span class="texto-italica">Estilo: </span>ElectroPop / Dance-Pop</li>
+          <li><span class="texto-italica">Duración original: </span>2:33 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Anhelo de una mujer por su amor imposible</li>
+        </ul>
+        <audio controls id="audio7">
+          <source src="audios/Amor_Imposible-Lia_Vega-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="muestra"> <!-- Demo 8 -->
+        <img src="img/muestras/robocop_corporativo.jpg" alt="Robocop Corporativo">
+        <div class="Titulo-Demo">Robocop Corporativo</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Los Skamales Verdes</a></li>
+          <li><span class="texto-italica">Estilo: </span>Ska</li>
+          <li><span class="texto-italica">Duración original: </span>3:32 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Un trabajador frustado pero decidido, se desahoga de su jefe</li>
+        </ul>
+        <audio controls id="audio8">
+          <source src="audios/Robocop_Corporativo-Los_Skamales_Verdes-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="muestra"> <!-- Demo 9 -->
+        <img src="img/muestras/bajo_el_mismo_azul.jpg" alt="Homenaje">
+        <div class="Titulo-Demo">Bajo el Mismo Azul</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span>Dueto hombre y mujer</li>
+          <li><span class="texto-italica">Estilo: </span>Balada</li>
+          <li><span class="texto-italica">Duración original: </span>3:41 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Un homenaje y agradecimiento a la Familia Rodríguez</li>
+        </ul>
+        <audio controls id="audio9">
+          <source src="audios/Para_Mi_Familia_Bajo_el_Mismo_Azul-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <p><a href="demos.html" class="boton-artistas">Escucha más demos →</a></p>
+    </div>
+  </section>
+
+  <!-- wwwwwwwwwwwwwwwwwwwwwwwwwww  PLANES  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW -->
+  <!-- Planes -->
+  <section class="seccion" id="planes">
+    <h2><img src="img/viñetas/secc_planes.png" alt="Viñeta" class="titulo-vineta"> Nuestros Planes</h2>
+    <div class="planes-contenedor">
+      <div class="plan">
+        <h3>Express</h3>
+        <ul>
+          <li>No se incluyen revisiones de letra</li>
+          <li>Voz genérica masculina o femenina<sup>1</sup></li>
+          <li>Catálogo <u>esencial</u> de 10 estilos musicales<sup>2</sup></li>
+          <li>Hasta 3 estrofas + coro</li>
+          <li>Hasta 2:30 minutos. Calidad estándar de voces e instrumentos</li>
+          <li>La canción se entrega sin demos previos</li>
+          <li>Entrega en 3 días hábiles</li>
+        </ul>
+        <div class="precio">$350<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20Express." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
+      </div>
+      <div class="plan">
+        <h3>Estándar</h3>
+        <ul>
+          <li>Hasta 3 revisiones de letra incluídas</li>
+          <li>Voz genérica masculina o femenina<sup>1</sup></li>
+          <li>Catálogo <u>esencial</u> de 10 estilos musicales<sup>2</sup></li>
+          <li>Hasta 4 estrofas + coro</li>
+          <li>Hasta 3:30 minutos. Calidad estándar de voces e instrumentos</li>
+          <li>2 demos para elegir la versión final</li>
+          <li>Entrega en 5 días hábiles, después de tener la letra defintiva</li>
+          <li>Opción de video con imagen fija y letra de la canción, con costo adicional<sup>4</sup></li>
+        </ul>
+        <div class="precio">$500<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20Estándar." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
+      </div>
+      <div class="plan premium">
+        <h3>Premium</h3>
+        <ul>
+          <li>Hasta 5 revisiones de letra incluídas</li>
+          <li>Acceso a todos los artistas digitales</li>
+          <li>Catálogo <u>extendido</u> + de 20 estilos musicales<sup>3</sup></li>
+          <li>Hasta 6 estrofas + coros intermedio y final</li>
+          <li>Hasta 5:00 minutos. Calidad premium de voces e instrumentos</li>
+          <li>2 demos para elegir la versión final</li>
+          <li>Entrega en 8 días hábiles, después de tener la letra definitiva</li>
+          <li>Video con imagen fija de fondo y letra de la canción, incluido</li>
+        </ul>
+        <div class="precio">$850<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20Premium." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
+      </div>
+      <div class="plan">
+        <h3>BGM</h3>
+        <ul>
+          <li>Solo instrumental</li>
+          <li>Sin voz</li>
+          <li>Para presentaciones, video-tutoriales, podcasts o ambientación</li>
+          <li>Cualquier estilo musical del catálogo completo (+ de 20 estilos)</li>
+          <li>Hasta 3:00 minutos. Calidad estándar de instrumentos</li>
+          <li>Entrega en 48hrs hábiles</li>
+        </ul>
+        <div class="precio">$150<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20BGM." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
+      </div>
+    </div>
+    <div class="observaciones_planes">
+      • Las letras son originales y escritas por nuestros letristas artísticos, basadas en la información que nos proporciones.<br>
+      • El boceto de la letra se entrega en 2 a 3 días hábiles en los planes Estándar y Premium. En el plan Express se entrega junto con el mp3 en cuanto la canción esté lista.<br>
+      <sup>1</sup> Debido a la generación por IA, las voces genéricas pueden tener acentos castellanos. El plan Premium ofrece el catálogo SingersTeam, con opciones de voces más naturales y expresivas.<br>
+      <sup>2</sup> El catálogo esencial incluye 10 estilos: Balada, Pop, Rock, Infantil/Festivo, Bolero, Cumbia, Bachata, Mariachi, Norteño y Reguetón.<br>
+      <sup>3</sup> El catálogo extendido incluye además de los anteriores: Corridos, Electrónica, Metal, Ska, Calypso, Country, Rock 60s, Disco 70s, Cinemática, Chill y Gospel.<br>
+      <sup>4</sup> El video con imagen fija y letra de la canción tiene un costo adicional de $150 MXN en el plan Estándar. En el plan Premium está incluido sin costo adicional. La imagen es generada con base en la letra de la canción o puede usarse alguna otorgada por el cliente.
+    </div>
+  </section>
+
+<!-- Botón de contratación -->
+<div class="contrata-boton">
+  <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20una%20canción%20personalizada." 
+     target="_blank" 
+     class="boton-whatsapp">
+    <span><img src="img/viñetas/whatsapp.png"></span> ¡Contrata aquí! (44 3858 2775)
+  </a>
+</div>
+
+  <!-- WWWWWWWWWWWWWWWWWWWWWWWWWWWW  FAQ  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW-->
+  <!-- FAQ -->
+  <section class="seccion" id="faq">
+    <h2><img src="img/viñetas/secc_preguntas.png" alt="Viñeta" class="titulo-vineta"> Preguntas Frecuentes</h2>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">›</span>  ¿Puedo solicitar la voz de un artista famoso?</h3>
+      <div class="faq-respuesta">
+        Por reglamentaciones de copyright y derechos de autor, no podemos ofrecer voces de artistas famosos o reconocidos.
+        Sin embargo, contamos con un catálogo diverso de voces genéricas y artistas digitales únicos, cada uno con su propio estilo y personalidad emocional, para que puedas encontrar la voz perfecta para tu canción personalizada.<div class="BRChico"><br></div>
+        Nuestro objetivo es brindarte una experiencia musical auténtica y original, respetando siempre los derechos de los artistas y las leyes vigentes en materia de propiedad intelectual.
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+    <div id="contacto-container"></div>
+    <script src="js/contacto.js" onload="insertarContacto()"></script>
+    <script>
+      document.getElementById('contacto-container').innerHTML = contactoHTML;
+    </script>
+
+   <!--
+  <section class="seccion" id="contacto">
+    <h2><img src="img/viñetas/secc_contacto.png" alt="Viñeta" class="titulo-vineta"> Contacto</h2>
+    <div class="contacto-info">
+    </div>
+    <section class="tres-columnas-contacto">
+      <div class="columnac">
+       <img src="img/viñetas/ico_whatsapp.png">WhatsApp<div class="BRChico"><br></div>
+        <h3>+52 1 44 3858 2775</h3>
+      </div>
+      <div class="columnac">
+        <img src="img/viñetas/ico_correo.png">Correo<div class="BRChico"><br></div>
+        <h3>keiwaremusic@gmail.com</h3>
+      </div>
+      <div class="columnac">
+        <img src="img/viñetas/ico_telefono.png">Teléfono<div class="BRChico"><br></div>
+        <h3>443 614 7779</h3>
+      </div>
+      -->
+      <!-- <div class="columnac" style="flex-basis: 50px;">test</div> -->
+      <!--
+      <div class="columnac" style="flex-basis: 250px;">
+        <a href="#"><img src="img/viñetas/ico_facebook.png">Facebook</a> &nbsp; &nbsp; &nbsp;
+        <a href="#"><img src="img/viñetas/ico_instagram.png">Instagram</a> &nbsp; &nbsp; &nbsp;
+        <a href="#"><img src="img/viñetas/ico_tiktok.png">TikTok</a> &nbsp; &nbsp; &nbsp;
+        <a href="#"><img src="img/viñetas/ico_youtube.png">YouTube</a>
+      </div>
+    </section>
+  </section> -->
+
+  <!-- Modal PuntosPremia -->
+  <div id="overlay">
+    <div id="modal" role="dialog" aria-labelledby="modalTitulo" class="modal">
+      <span id="modalTitulo" class="titulo-puntos">Puntos Premia</span>
+      <div>Espera pronto más noticias sobre este programa de recompensas</div>
+      <button class="boton-modal" onclick="cerrarModal()">Aceptar</button>
+      <!-- <button class="boton-modal" onclick="cerrarModal()">Cancelar</button> -->
+    </div>
+  </div>
+ <!-- <button id="abrirModal">Abrir Modal</button> -->
+
+   <!-- Modal Estilos Musicales -->
+  <div id="overlay-estilos">
+    <div id="modal-estilos" role="dialog" aria-labelledby="modalTituloEstilos" class="modal-estilos">
+      <span id="modalTituloEstilos" class="titulo-estilos">Estilos Musicales</span>
+      <div>
+        <p style="text-align: left; font-weight: 700; color: var(--azul)">Catláogo esencial:</p>
+        Balada, Pop, Rock, Infantil/Festivo, Bolero, Cumbia, Bachata, Mariachi, Norteño y Reguetón
+        <br><div class="BRChico"><br></div>
+        <p style="text-align: left; font-weight: 700; color: var(--azul)">Catláogo extendido:</p>
+        Corridos, Electrónica, Metal, Ska, Calypso, Country, Rock 60s, Disco 70s, Cinemática, Chill y Gospel
+      </div>
+      <button class="boton-modal-estilos" onclick="cerrarModalEstilos()">Aceptar</button>
+    </div>
+  </div>
+
+
+ <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Keiware Music. Todos los derechos reservados &nbsp;·&nbsp; <span class="pie-keiwaremexico">Sitio diseñado y desarrollado por:<a href="https://www.facebook.com/keiware" target="_blank">Keiware México</a></span></p>
+    <p>
+      <a href="aviso-privacidad.html" target="_blank">Aviso de Privacidad</a> •
+      <span id="abrirModal" class="link-puntos">Programa Puntos Premia</span> •
+      <a href="aviso-privacidad.html#cookies" target="_blank">Aviso de Cookies</a>
+    </p>
+  </footer>
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/modal_js.js"></script>
+  <script src="js/singersteam_js"></script> <!-- Para control de tarjeta de artista -->
+  <script src="js/artistas.js"></script> <!-- Para control de tarjeta de artista -->
+  <script>
+    const thumbnails = document.querySelectorAll('.cuadricula-artistas img');
+    const artistInfos = document.querySelectorAll('.tarjeta-artista');
+
+    thumbnails.forEach(img => {
+      img.addEventListener('click', () => {
+        // Quitar clase activa de todas las imágenes
+        thumbnails.forEach(i => i.classList.remove('active'));
+        img.classList.add('active');
+
+        // Mostrar solo la info del artista seleccionado
+        const id = img.dataset.artist;
+        artistInfos.forEach(info => {
+          info.classList.remove('active');
+        });
+        document.getElementById(`artist-${id}`).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+==============================================================================
+Código CSS estilo.css:
+
+:root {
+  --rosa: #D31AF2;
+  --rosa2: #8e13a3;
+  --azul: #2E7EFC;
+  --azul2: #19468f;
+  --azul3: #54a2fc;
+  --negro: #0a0a0f;
+  --gris-oscuro: #121218;
+  --amarillo: rgb(255, 255, 180);
+  --amarillo2: rgb(240, 255, 190);
+  --fondo-celda: rgba(37, 51, 68, 0.7);
+}
+
+/* Scroll suave para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+.seccion {
+  scroll-margin-top: 80px; /* Ajusta según la altura de tu menú */
+}
+
+.inicio_estilos {
+  color:var(--amarillo);
+  text-align: center;
+}
+
+
+
+/* Botón de contratación */
+.contrata-boton {
+  text-align: center;
+  margin: 40px auto 60px;
+}
+
+.boton-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366; /* Verde oficial de WhatsApp */
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+  background: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  color: white;
+}
+
+.boton-whatsapp span {
+  /* font-size: 1.4em; */
+    margin-top: 10px;
+}
+
+.boton-artistas {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--azul) 0%, var(--rosa) 100%);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(46, 126, 252, 0.12);
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 12px;
+}
+.boton-artistas:hover {
+  background: linear-gradient(90deg, var(--rosa) 0%, var(--azul) 100%);
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Nunito', 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  
+  color: white;
+  line-height: 1.6;
+}
+
+.indice {
+background: var(--negro) url('../img/fondo-acuarela.jpg') center/cover fixed;
+}
+
+.artistas-body {
+background: var(--negro) url('../img/fondo_artistas.jpg') center/cover fixed;
+}
+
+/* Menú */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(10, 10, 15, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Delimitar la zona del menú con una línea sutil */
+  border-bottom: 1px solid rgba(37, 113, 255, 0.24);
+  /* Opcional: ligero blur para separar del contenido (soporta navegadores modernos) */
+  backdrop-filter: blur(4px);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4em;
+  color: var(--rosa);
+}
+
+.logo2 {
+  margin: 0px;
+  display: flex;
+  font-weight: 100;
+  font-size: 0.4em;
+  color: var(--rosa);
+  padding: 0px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* Menú - enlaces */
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--rosa);
+  background: rgba(211, 26, 242, 0.1);
+}
+
+.nav-menu a.activo {
+  color: var(--azul);
+  background: rgba(46, 126, 252, 0.2);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Carrusel */
+.carrusel {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 1150px;
+  width: 100%;
+}
+
+.carrusel-contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+.carrusel-contenedor img.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carrusel-controles {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carrusel-btn {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Indicador de progreso debajo del carrusel */
+.carrusel-progreso {
+  max-width: 1150px;
+  width: 100%;
+  margin: 199px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+/* Visual hint: cuando el usuario hace hover sobre la imagen se considera 'pausa' */
+.carrusel:hover .carrusel-progreso .progreso-fill {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
+}
+
+.progreso-barra {
+  flex: 1 1 auto;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progreso-fill {
+  height: 100%;
+  width: 0%;
+  /* background: linear-gradient(90deg, var(--azul), var(--rosa)); */
+  background: linear-gradient(90deg, rgba(50,50,50, 0.5), rgba(250,250,250, 0.7));
+  transition: width 0.2s linear;
+}
+
+/* label removed: no visual seconds counter */
+
+/* Secciones */
+.seccion {
+  max-width: 1150px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* Título de sección con fondo y viñeta */
+.seccion h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, var(--azul) 0%, var(--rosa) 100%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(46, 126, 252, 0.15);
+  gap: 18px; /* espacio entre viñeta e h2 */
+  /* text-align: center; */
+}
+
+.estilos-musicales {
+  background: linear-gradient(90deg, var(--azul) 0%, var(--rosa) 100%);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer; 
+  font-weight: 700;
+}
+/* Viñeta imagen */
+.titulo-vineta {
+  width: 38px;
+  height: 38px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin-right: 8px;
+  box-shadow: 5px 2px 8px rgba(0,0,0,0.5);
+  border: 1px solid white;
+}
+
+.lista-simbolo {
+  color: cyan;
+  font-size: 1.5em;
+  padding-right: 5px;
+}
+
+
+.icono {
+  color: var(--rosa);
+  margin-right: 10px;
+}
+
+/* Dos columnas */
+.dos-columnas {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.col-img img {
+  width: 110px;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-width: 110px;
+  border-radius: 10px;
+ /* transition: size 0.5s; */
+}
+
+/* Artistas: centrar enlace y collage de imágenes */
+.artistas-enlace {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra contenido horizontalmente */
+  text-align: center;  /* asegura textos centrados dentro */
+  margin-top: 12px;
+  max-width: 1150px; /* coincide con el ancho máximo usado en .seccion y .carrusel */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collage-artistas {
+  display: flex;
+  gap: 12px;
+  justify-content: center; /* centra las miniaturas */
+  align-items: flex-start; /* alinea arriba para que captions de distinta altura no desplacen */
+  margin-top: 12px;
+  flex-wrap: wrap; /* que quepan en pantallas pequeñas */
+}
+
+.collage-artistas {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.collage-artistas img:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 480px) {
+  .collage-artistas img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-img img {
+    width: 80px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collage-artistas {
+    align-items: center; /* en móviles, centramos verticalmente para mejor equilibrio */
+  }
+}
+
+/* Estilos para tarjetas de artista (figure + figcaption dentro de enlace) */
+.artista-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.artista-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 200px; /* coincide con el tamaño de las imágenes */
+  /* border: #25D366 2px solid; */
+  border-bottom: #20709085 1px solid;
+  min-height: 350px;
+}
+
+.artista-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.artista-item figcaption {
+  font-size: 0.95em;
+  color: #e6e6e6;
+  line-height: 1.2;
+}
+
+/* Cards de Cantantes digitales */
+ul.cantantes-bio {
+  padding-left: 15px;
+  margin: 0;
+}
+.artista-item .nombre {
+  /* background: linear-gradient(90deg, #006070 0%, #004050 100%); */
+  background-color: var(--fondo-celda);
+  font-size: 1em;  
+  font-weight: 600;
+  color: var(--amarillo);
+  font-family: 'Merriweather', sans-serif;
+  font-style: italic;
+}
+.artista-item .genero {
+  /* font-weight: 700; */
+  font-size: 1em;
+  color: cyan;
+  text-align: left;
+}
+.artista-item .bio {
+  font-size: 1em;
+  color: white;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .artista-item, .artista-item img {
+    width: 100px;
+    height: 100px;
+  }
+  .artista-item figcaption {
+    font-size: 0.8em;
+  }
+}
+
+/* Muestras */
+.tabla-muestras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.muestra {
+  background: rgba(37, 51, 68, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.muestra img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0px;
+}
+
+/* Planes */
+.planes-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* Separación entre 'celdas'  */
+  margin-top: 30px;
+}
+
+.plan {
+  background: rgba(30, 30, 40, 0.8);
+  /* padding: 25px; */
+  border-radius: 15px;
+  width: 250px;
+  text-align: left;
+  /* box-shadow: 0 2px 12px rgba(46,126,252,0.10); */
+  box-shadow: 0 2px 12px rgba(46, 204, 252, 0.651);
+  padding: 22px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 480px; /* Ajusta según contenido */
+  position: relative;
+}
+.plan sup {
+  color: cyan;
+}
+.plan.premium {
+  background: linear-gradient(135deg, var(--rosa2), var(--azul2));
+  transform: scale(1.00);
+  box-shadow: 0 2px 20px rgba(230, 89, 255, 0.5);
+}
+.plan h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+.plan li {
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 0.98em;
+  /* padding-left: 25px; */
+  line-height: 1.2;
+}
+.plan .precio {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 15px; /* parece que no hace nada */
+  color: var(--amarillo);  
+  margin-top: auto;
+  margin-bottom: 6px;
+}
+.plan-precio-mxn {
+  font-size: 0.5em;
+  font-weight: normal;
+  color: white;
+  margin-left: 8px;
+}
+.observaciones_planes {
+  font-size: 1em;
+  line-height: normal;
+  color: #ccc;
+  text-align: left;
+  margin-top: 15px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.observaciones_planes sup {
+  color: cyan; 
+}
+
+.boton-waplan {
+  text-align: center;
+  display: inline-block;
+  background: #25D366;
+  color: black;
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: 7px 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  box-shadow: 0 1px 6px rgba(46,126,252,0.10);
+  transition: background 0.5s;
+}
+.boton-waplan:hover {
+  background: #128C7E;
+  color: #fff;
+}
+
+
+/* FAQ */
+.faq-item {
+  background: rgba(37, 51, 68, 0.7);  
+  margin: 15px 0;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.faq-item h3 {
+  /* align-items: left; */
+  /* justify-content: space-between; */
+  color: var(--amarillo2);
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+.faq-respuesta {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: none;
+}
+
+.faq-respuesta.mostrar {
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(5, 5, 10, 0.9);
+  margin-top: 60px;
+  font-family: 'Nunito', 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
+footer a {
+  color: var(--azul3);
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer a:hover {
+  color: var(--amarillo2);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background: var(--gris-oscuro);
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 0;
+    display: none;
+  }
+
+  .nav-menu.mostrar {
+    display: flex;
+  }
+
+  .dos-columnas {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrusel {
+    height: 250px;
+  }
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.1);
+  background: #128C7E;
+}
+
+/* Ocultar en móviles pequeños (opcional) */
+@media (max-width: 768px) {
+  .whatsapp-flotante {
+    display: none;
+  }
+}
+
+/* Clase para desvanecer al hacer scroll */
+.whatsapp-flotante.oculto {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .tabla-muestras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tabla-muestras {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Para agregar un espacio entre párrafos */
+.BRChico {
+  font-size: 10px;
+}
+
+/* Cambia los puntos de UL por palomitas */
+.ListaChecks {
+  list-style: none;  
+  padding-left: 0px;
+}
+.ListaChecks li {
+  position: relative;
+  padding-left: 30px; /* espacio para la imagen */
+}
+.ListaChecks li::before {
+  content: "✔"; /* Puedes usar "✅" "❏" "✔", "✓", "•", "◦", "▪", "▫", etc. */
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: cyan;
+  font-size: 1em;
+}
+
+.TextoImportante {
+  color: var(--amarillo);
+  font-weight: 600;
+}
+
+.descripcion-demo {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.descripcion-demo li{
+  position: relative;
+  padding-left: 20px;
+}
+.descripcion-demo li::before{
+  content: "♪";
+  position: absolute;
+  left: 0px;
+  color: cyan;
+  font-size: 1em;
+}
+.Titulo-Demo{
+  color: var(--amarillo);
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.texto-italica {
+  font-style: italic;
+  font-size: 0.9em;
+  color: silver
+}
+.texto_historia {
+  color: var(--amarillo2)
+}
+
+.perfil-artista {
+  text-decoration: none;
+  color: var(--azul3);
+  font-weight: 800;
+}
+
+.nosotros_texto h3 {
+  color: cyan;
+  font-size: 1.2em;
+  font-weight: 800;
+  /* margin-top: 15px;
+  margin-bottom: 8px; */
+}
+
+.tres-columnas-contacto {  
+  justify-content: center;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  /* box-shadow: 0 2px 5px rgba(83, 80, 252, 0.507); */
+  vertical-align: bottom;  
+}
+.columnac {
+  flex: 1 0 30%; /* grow, shrink, basis - cuánto crece, cuánto encoge, medida inicial*/
+  text-align: center;
+  /* background-color: #f9f9f9; */
+  border: #19468f 1px solid;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(83, 80, 252, 0.507);
+  vertical-align: bottom;
+  background: rgba(30, 30, 40, 0.8);
+}
+.columnac img {
+  vertical-align:bottom;
+  margin-right: 7px;
+}
+.columnac h3 {
+  color: var(--amarillo);
+}
+.columnac a {
+  color: var(--azul3);
+  text-decoration: none;
+  font-weight: 700;
+}
+.columnac a:hover{
+  color: var(--amarillo2);
+}
+
+/* Política de Privacidad */
+.puntos-aviso {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.puntos-aviso li{
+  margin-left: 15px;
+}
+.puntos-aviso u{
+  font-style: italic;
+}
+.puntos-aviso a{
+  color: var(--amarillo);
+  text-decoration: underline;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .columna {
+    flex: 1 1 100%;
+  }
+}
+
+.pie-keiwaremexico {
+  font-size: 0.8em;
+}
+.pie-keiwaremexico a {
+  color: var(--amarillo2);
+}
+
+
+/* ICONOS ANIMADOS */
+  .balada-icon .heart {
+    animation: pulse 2s infinite ease-in-out;
+    transform-origin: center;
+  }
+
+  @keyframes pulse {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+/* .ListaChecks li {
+  background: url("img/v.png") left center no-repeat;
+} */

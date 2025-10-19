@@ -1,0 +1,854 @@
+Código CSS estilo.css:
+
+:root {
+  --rosa: #D31AF2;
+  --rosa2: #8e13a3;
+  --azul: #2E7EFC;
+  --azul2: #19468f;
+  --azul3: #54a2fc;
+  --negro: #0a0a0f;
+  --gris-oscuro: #121218;
+  --amarillo: rgb(255, 255, 180);
+  --amarillo2: rgb(240, 255, 190);
+  --fondo-celda: rgba(37, 51, 68, 0.7);
+}
+
+/* Scroll suave para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+.seccion {
+  scroll-margin-top: 80px; /* Ajusta según la altura de tu menú */
+}
+
+.inicio_estilos {
+  color:var(--amarillo);
+  text-align: center;
+}
+
+
+
+/* Botón de contratación */
+.contrata-boton {
+  text-align: center;
+  margin: 40px auto 60px;
+}
+
+.boton-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366; /* Verde oficial de WhatsApp */
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+  background: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  color: white;
+}
+
+.boton-whatsapp span {
+  /* font-size: 1.4em; */
+    margin-top: 10px;
+}
+
+.boton-artistas {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--azul) 0%, var(--rosa) 100%);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(46, 126, 252, 0.12);
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 12px;
+}
+.boton-artistas:hover {
+  background: linear-gradient(90deg, var(--rosa) 0%, var(--azul) 100%);
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Nunito', 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  
+  color: white;
+  line-height: 1.6;
+}
+
+.indice {
+background: var(--negro) url('../img/fondo-acuarela.jpg') center/cover fixed;
+}
+
+.artistas-body {
+background: var(--negro) url('../img/fondo_artistas.jpg') center/cover fixed;
+}
+
+/* Menú */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(10, 10, 15, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Delimitar la zona del menú con una línea sutil */
+  border-bottom: 1px solid rgba(37, 113, 255, 0.24);
+  /* Opcional: ligero blur para separar del contenido (soporta navegadores modernos) */
+  backdrop-filter: blur(4px);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4em;
+  color: var(--rosa);
+}
+
+.logo2 {
+  margin: 0px;
+  display: flex;
+  font-weight: 100;
+  font-size: 0.4em;
+  color: var(--rosa);
+  padding: 0px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* Menú - enlaces */
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--rosa);
+  background: rgba(211, 26, 242, 0.1);
+}
+
+.nav-menu a.activo {
+  color: var(--azul);
+  background: rgba(46, 126, 252, 0.2);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Carrusel */
+.carrusel {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 1150px;
+  width: 100%;
+}
+
+.carrusel-contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+.carrusel-contenedor img.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carrusel-controles {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carrusel-btn {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Indicador de progreso debajo del carrusel */
+.carrusel-progreso {
+  max-width: 1150px;
+  width: 100%;
+  margin: 199px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+/* Visual hint: cuando el usuario hace hover sobre la imagen se considera 'pausa' */
+.carrusel:hover .carrusel-progreso .progreso-fill {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
+}
+
+.progreso-barra {
+  flex: 1 1 auto;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progreso-fill {
+  height: 100%;
+  width: 0%;
+  /* background: linear-gradient(90deg, var(--azul), var(--rosa)); */
+  background: linear-gradient(90deg, rgba(50,50,50, 0.5), rgba(250,250,250, 0.7));
+  transition: width 0.2s linear;
+}
+
+/* label removed: no visual seconds counter */
+
+/* Secciones */
+.seccion {
+  max-width: 1150px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* Título de sección con fondo y viñeta */
+.seccion h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, var(--azul) 0%, var(--rosa) 100%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(46, 126, 252, 0.15);
+  gap: 18px; /* espacio entre viñeta e h2 */
+  /* text-align: center; */
+}
+
+.estilos-musicales {
+  background: linear-gradient(90deg, var(--azul) 0%, var(--rosa) 100%);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer; 
+  font-weight: 700;
+}
+/* Viñeta imagen */
+.titulo-vineta {
+  width: 38px;
+  height: 38px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin-right: 8px;
+  box-shadow: 5px 2px 8px rgba(0,0,0,0.5);
+  border: 1px solid white;
+}
+
+.lista-simbolo {
+  color: cyan;
+  font-size: 1.5em;
+  padding-right: 5px;
+}
+
+
+.icono {
+  color: var(--rosa);
+  margin-right: 10px;
+}
+
+/* Dos columnas */
+.dos-columnas {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.col-img img {
+  width: 110px;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-width: 110px;
+  border-radius: 10px;
+ /* transition: size 0.5s; */
+}
+
+/* Artistas: centrar enlace y collage de imágenes */
+.artistas-enlace {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra contenido horizontalmente */
+  text-align: center;  /* asegura textos centrados dentro */
+  margin-top: 12px;
+  max-width: 1150px; /* coincide con el ancho máximo usado en .seccion y .carrusel */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collage-artistas {
+  display: flex;
+  gap: 12px;
+  justify-content: center; /* centra las miniaturas */
+  align-items: flex-start; /* alinea arriba para que captions de distinta altura no desplacen */
+  margin-top: 12px;
+  flex-wrap: wrap; /* que quepan en pantallas pequeñas */
+}
+
+.collage-artistas {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.collage-artistas img:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 480px) {
+  .collage-artistas img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-img img {
+    width: 80px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collage-artistas {
+    align-items: center; /* en móviles, centramos verticalmente para mejor equilibrio */
+  }
+}
+
+/* Estilos para tarjetas de artista (figure + figcaption dentro de enlace) */
+.artista-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.artista-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 200px; /* coincide con el tamaño de las imágenes */
+  /* border: #25D366 2px solid; */
+  border-bottom: #20709085 1px solid;
+  min-height: 350px;
+}
+
+.artista-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.artista-item figcaption {
+  font-size: 0.95em;
+  color: #e6e6e6;
+  line-height: 1.2;
+}
+
+/* Cards de Cantantes digitales */
+ul.cantantes-bio {
+  padding-left: 15px;
+  margin: 0;
+}
+.artista-item .nombre {
+  /* background: linear-gradient(90deg, #006070 0%, #004050 100%); */
+  background-color: var(--fondo-celda);
+  font-size: 1em;  
+  font-weight: 600;
+  color: var(--amarillo);
+  font-family: 'Merriweather', sans-serif;
+  font-style: italic;
+}
+.artista-item .genero {
+  /* font-weight: 700; */
+  font-size: 1em;
+  color: cyan;
+  text-align: left;
+}
+.artista-item .bio {
+  font-size: 1em;
+  color: white;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .artista-item, .artista-item img {
+    width: 100px;
+    height: 100px;
+  }
+  .artista-item figcaption {
+    font-size: 0.8em;
+  }
+}
+
+/* Muestras */
+.tabla-muestras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.muestra {
+  background: rgba(37, 51, 68, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.muestra img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0px;
+}
+
+/* Planes */
+.planes-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* Separación entre 'celdas'  */
+  margin-top: 30px;
+}
+
+.plan {
+  background: rgba(30, 30, 40, 0.8);
+  /* padding: 25px; */
+  border-radius: 15px;
+  width: 250px;
+  text-align: left;
+  /* box-shadow: 0 2px 12px rgba(46,126,252,0.10); */
+  box-shadow: 0 2px 12px rgba(46, 204, 252, 0.651);
+  padding: 22px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 480px; /* Ajusta según contenido */
+  position: relative;
+}
+.plan sup {
+  color: cyan;
+}
+.plan.premium {
+  background: linear-gradient(135deg, var(--rosa2), var(--azul2));
+  transform: scale(1.00);
+  box-shadow: 0 2px 20px rgba(230, 89, 255, 0.5);
+}
+.plan h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+.plan li {
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 0.98em;
+  /* padding-left: 25px; */
+  line-height: 1.2;
+}
+.plan .precio {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 15px; /* parece que no hace nada */
+  color: var(--amarillo);  
+  margin-top: auto;
+  margin-bottom: 6px;
+}
+.plan-precio-mxn {
+  font-size: 0.5em;
+  font-weight: normal;
+  color: white;
+  margin-left: 8px;
+}
+.observaciones_planes {
+  font-size: 1em;
+  line-height: normal;
+  color: #ccc;
+  text-align: left;
+  margin-top: 15px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.observaciones_planes sup {
+  color: cyan; 
+}
+
+.boton-waplan {
+  text-align: center;
+  display: inline-block;
+  background: #25D366;
+  color: black;
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: 7px 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  box-shadow: 0 1px 6px rgba(46,126,252,0.10);
+  transition: background 0.5s;
+}
+.boton-waplan:hover {
+  background: #128C7E;
+  color: #fff;
+}
+
+
+/* FAQ */
+.faq-item {
+  background: rgba(37, 51, 68, 0.7);  
+  margin: 15px 0;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.faq-item h3 {
+  /* align-items: left; */
+  /* justify-content: space-between; */
+  color: var(--amarillo2);
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+.faq-respuesta {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: none;
+}
+
+.faq-respuesta.mostrar {
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(5, 5, 10, 0.9);
+  margin-top: 60px;
+  font-family: 'Nunito', 'Open Sans', sans-serif;
+  font-size: 1.2em;
+}
+footer a {
+  color: var(--azul3);
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer a:hover {
+  color: var(--amarillo2);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background: var(--gris-oscuro);
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 0;
+    display: none;
+  }
+
+  .nav-menu.mostrar {
+    display: flex;
+  }
+
+  .dos-columnas {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrusel {
+    height: 250px;
+  }
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.1);
+  background: #128C7E;
+}
+
+/* Ocultar en móviles pequeños (opcional) */
+@media (max-width: 768px) {
+  .whatsapp-flotante {
+    display: none;
+  }
+}
+
+/* Clase para desvanecer al hacer scroll */
+.whatsapp-flotante.oculto {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .tabla-muestras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tabla-muestras {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Para agregar un espacio entre párrafos */
+.BRChico {
+  font-size: 10px;
+}
+
+/* Cambia los puntos de UL por palomitas */
+.ListaChecks {
+  list-style: none;  
+  padding-left: 0px;
+}
+.ListaChecks li {
+  position: relative;
+  padding-left: 30px; /* espacio para la imagen */
+}
+.ListaChecks li::before {
+  content: "✔"; /* Puedes usar "✅" "❏" "✔", "✓", "•", "◦", "▪", "▫", etc. */
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: cyan;
+  font-size: 1em;
+}
+
+.TextoImportante {
+  color: var(--amarillo);
+  font-weight: 600;
+}
+
+.descripcion-demo {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 0.9em;
+  color: white;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.descripcion-demo li{
+  position: relative;
+  padding-left: 20px;
+}
+.descripcion-demo li::before{
+  content: "♪";
+  position: absolute;
+  left: 0px;
+  color: cyan;
+  font-size: 1em;
+}
+.Titulo-Demo{
+  color: var(--amarillo);
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.texto-italica {
+  font-style: italic;
+  font-size: 0.9em;
+  color: silver
+}
+.texto_historia {
+  color: var(--amarillo2)
+}
+
+.perfil-artista {
+  text-decoration: none;
+  color: var(--azul3);
+  font-weight: 800;
+}
+
+.nosotros_texto h3 {
+  color: cyan;
+  font-size: 1.2em;
+  font-weight: 800;
+  /* margin-top: 15px;
+  margin-bottom: 8px; */
+}
+
+.tres-columnas-contacto {  
+  justify-content: center;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  /* box-shadow: 0 2px 5px rgba(83, 80, 252, 0.507); */
+  vertical-align: bottom;  
+}
+.columnac {
+  flex: 1 0 30%; /* grow, shrink, basis - cuánto crece, cuánto encoge, medida inicial*/
+  text-align: center;
+  /* background-color: #f9f9f9; */
+  border: #19468f 1px solid;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(83, 80, 252, 0.507);
+  vertical-align: bottom;
+  background: rgba(30, 30, 40, 0.8);
+}
+.columnac img {
+  vertical-align:bottom;
+  margin-right: 7px;
+}
+.columnac h3 {
+  color: var(--amarillo);
+}
+.columnac a {
+  color: var(--azul3);
+  text-decoration: none;
+  font-weight: 700;
+}
+.columnac a:hover{
+  color: var(--amarillo2);
+}
+
+/* Política de Privacidad */
+.puntos-aviso {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.puntos-aviso li{
+  margin-left: 15px;
+}
+.puntos-aviso u{
+  font-style: italic;
+}
+.puntos-aviso a{
+  color: var(--amarillo);
+  text-decoration: underline;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .columna {
+    flex: 1 1 100%;
+  }
+}
+
+.pie-keiwaremexico {
+  font-size: 0.8em;
+}
+.pie-keiwaremexico a {
+  color: var(--amarillo2);
+}
+
+
+/* ICONOS ANIMADOS */
+  .balada-icon .heart {
+    animation: pulse 2s infinite ease-in-out;
+    transform-origin: center;
+  }
+
+  @keyframes pulse {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+/* .ListaChecks li {
+  background: url("img/v.png") left center no-repeat;
+} */

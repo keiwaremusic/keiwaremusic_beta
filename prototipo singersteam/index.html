@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SingersTeam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>SingersTeam</h1>
+
+  <div class="artist-grid">
+    <img src="../img/artistas/ana_hash-thumb.jpg" alt="Alison Nova" class="artist-thumb" data-id="1">
+    <img src="../img/artistas/lyra_skye-thumb.jpg" alt="Echo Lumen" class="artist-thumb" data-id="2">
+    <img src="../img/artistas/eduardo_montiel-thumb.jpg" alt="Eduardo Montiel" class="artist-thumb" data-id="3">
+    <img src="../img/artistas/fernando_del_real-thumb.jpg" alt="Fernando Del Real" class="artist-thumb" data-id="4">
+  </div>
+
+  <div id="artist-detail" class="hidden">
+    <img id="detail-photo" src="" alt="Foto del artista">
+    <h2 id="detail-name"></h2>
+    <p id="detail-bio"></p>
+    <p id="detail-genres"></p>
+    <div id="detail-audio-container"></div>
+  </div>
+
+  <script src="artists.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

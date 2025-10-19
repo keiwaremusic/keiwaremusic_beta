@@ -1,0 +1,633 @@
+<!-- Micrófono con corazón palpitando: -->
+
+<style>
+  .balada-icon .heart {
+    animation: pulse 2s infinite ease-in-out;
+    transform-origin: center;
+  }
+  @keyframes pulse {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .pop-icon .star {
+    animation: shimmer 2.5s infinite ease-in-out;
+    transform-origin: center;
+  }
+  @keyframes shimmer {
+    0%   { transform: scale(1) rotate(0deg); opacity: 1; }
+    50%  { transform: scale(1.15) rotate(5deg); opacity: 0.85; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+
+  .rock-icon .guitar {
+    animation: riff 1.8s infinite ease-in-out;
+    transform-origin: center;
+  }
+  @keyframes riff {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-5deg); }
+    50%  { transform: rotate(5deg); }
+    75%  { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .electro-icon .pulse {
+    animation: beat 1.2s infinite ease-in-out;
+    transform-origin: center;
+  }
+  @keyframes beat {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.15); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+.infantil-icon .balloon {
+    animation: float 3s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .cumbia-icon .accordion {
+    animation: squeeze 2s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes squeeze {
+    0%   { transform: scaleX(1); }
+    50%  { transform: scaleX(1.15); }
+    100% { transform: scaleX(1); }
+  }
+
+.corridos-icon .horse {
+    animation: trot 2.2s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes trot {
+    0%   { transform: translateX(0px); }
+    50%  { transform: translateX(4px); }
+    100% { transform: translateX(0px); }
+  }
+
+ .gospel-icon .hands {
+    animation: praise 2.5s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+  @keyframes praise {
+    0%   { transform: scale(1) rotate(0deg); }
+    50%  { transform: scale(1.1) rotate(3deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+
+
+  .disco-icon .mirrorball {
+    animation: spin 3s linear infinite;
+    transform-origin: center;
+  }
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+ .mariachi-icon .sombrero {
+    animation: tipHat 2.5s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+  @keyframes tipHat {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
+  .cinematica-icon .stars {
+    animation: twinkle 2.5s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes twinkle {
+    0%   { opacity: 1; transform: scale(1); }
+    50%  { opacity: 0.6; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  .ska-icon .rude-boy {
+    animation: skank 1.6s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+
+  @keyframes skank {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
+
+
+  .calypso-icon .drum {
+    animation: bounce 1.8s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes bounce {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  .bolero-icon .rose {
+    animation: bloom 3.5s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes bloom {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.1); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+
+  .rock60s-icon .guitar60s {
+    animation: vibe 2.2s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes vibe {
+    0%   { transform: rotate(0deg) scale(1); }
+    50%  { transform: rotate(-5deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+
+  .regueton-icon .speaker {
+    animation: boom 1.4s ease-in-out infinite;
+    transform-origin: center;
+  }
+  @keyframes boom {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.15); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .norteno-icon .bajo {
+    animation: strum 2.2s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes strum {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .metal-icon .horns {
+    animation: headbang 1.2s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+  @keyframes headbang {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-6deg); }
+    50%  { transform: rotate(6deg); }
+    75%  { transform: rotate(-4deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
+
+
+
+
+
+
+<style>
+  .country-icon .guitar-hat {
+    animation: sway 2.8s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+  @keyframes sway {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(4deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.bachata-icon .couple {
+    animation: swayBachata 2.8s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+  @keyframes swayBachata {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+
+  .bgm-icon .wave {
+    animation: floatWave 3s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes floatWave {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.08); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .chill-icon .cloud {
+    animation: breathe 4s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes breathe {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.08); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+</style>
+
+<nav class="genre-nav">
+  <button onclick="showGenre('Bachata')">Bachata</button>
+  <button onclick="showGenre('Bolero')">Bolero</button>
+  <button onclick="showGenre('Calypso')">Calypso</button>
+  <button onclick="showGenre('Chill')">Chill</button>
+  <button onclick="showGenre('Country')">Country</button>
+  <!-- ...continúa con todos los estilos -->
+</nav>
+
+
+<section id="Bachata" class="genre-section">
+  <h2>Bachata</h2>
+  <div class="demo">
+    <!-- Aquí va el ícono SVG, audio demo, descripción -->
+  </div>
+</section>
+
+<section id="Bolero" class="genre-section">
+  <h2>Bolero</h2>
+  <div class="demo">
+    <!-- Ícono, audio, descripción -->
+  </div>
+</section>
+<!-- ...continúa con los demás estilos -->
+
+
+
+
+Balada: Micrófono con corazón
+<svg class="balada-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Micrófono -->
+  <rect x="26" y="8" width="12" height="28" rx="6" fill="#D94F70"/>
+  <rect x="29" y="36" width="6" height="12" fill="#D94F70"/>
+  <path d="M32 50v6" stroke="#D94F70" stroke-width="2"/>
+  <path d="M22 58h20" stroke="#D94F70" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Corazón animado -->
+  <path class="heart" d="M44 16c0-4.418-3.582-8-8-8-2.21 0-4.2 1.1-5.5 2.8C29.2 9.1 27.21 8 25 8c-4.418 0-8 3.582-8 8 0 8 15 16 15 16s15-8 15-16z" fill="#F28CA0"/>
+</svg>
+
+<hr>
+
+Pop: estrella
+<svg class="pop-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Círculo base -->
+  <circle cx="32" cy="32" r="30" fill="#FFD93D" stroke="#F4B400" stroke-width="2"/>
+
+  <!-- Estrella animada -->
+  <path class="star" d="M32 14l4.2 10.8H48l-8.8 6.8L42.4 44 32 36.6 21.6 44l3.2-12.4L16 24.8h11.8L32 14z" fill="#FFFFFF"/>
+</svg>
+
+<hr>
+
+Rock: guitarra eléctrica
+<svg class="rock-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular -->
+  <circle cx="32" cy="32" r="30" fill="#2E2E2E" stroke="#FF3B3B" stroke-width="2"/>
+
+  <!-- Guitarra eléctrica animada -->
+  <path class="guitar" d="M20 20l4 4-2 2 6 6 2-2 4 4-2 2 6 6 2-2 4 4-2 2 6 6-4 4-6-6-2 2-4-4 2-2-6-6-2 2-4-4 2-2-6-6 2-2-4-4z" fill="#FFFFFF"/>
+</svg>
+
+<hr>
+
+Electrónica: Pulso electrónico con ondas
+<svg class="electro-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo oscuro -->
+  <circle cx="32" cy="32" r="30" fill="#0A0A0A" stroke="#00F0FF" stroke-width="2"/>
+  <!-- Circuito central -->
+  <path d="M20 32h24" stroke="#00F0FF" stroke-width="2"/>
+  <circle class="pulse" cx="32" cy="32" r="6" fill="#00F0FF"/>
+  <!-- Líneas de circuito -->
+  <path d="M32 26v-6" stroke="#00F0FF" stroke-width="2"/>
+  <path d="M32 38v6" stroke="#00F0FF" stroke-width="2"/>
+  <path d="M26 32h-6" stroke="#00F0FF" stroke-width="2"/>
+  <path d="M38 32h6" stroke="#00F0FF" stroke-width="2"/>
+</svg>
+
+<hr>
+
+Infantil/festiva: globo
+<svg class="infantil-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Globo animado -->
+  <g class="balloon">
+    <ellipse cx="32" cy="28" rx="14" ry="18" fill="#FF90C2" stroke="#E04E9F" stroke-width="2"/>
+    <path d="M32 46v6" stroke="#E04E9F" stroke-width="2"/>
+    <path d="M30 52c1.5 2 3.5 2 5 0" stroke="#E04E9F" stroke-width="2" stroke-linecap="round"/>
+    <!-- Carita sonriente -->
+    <circle cx="28" cy="26" r="1.5" fill="#4A154B"/>
+    <circle cx="36" cy="26" r="1.5" fill="#4A154B"/>
+    <path d="M28 30c1.5 2 6.5 2 8 0" stroke="#4A154B" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>
+
+<hr>
+
+Cumbia: Acordeón
+<svg class="cumbia-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo festivo -->
+  <circle cx="32" cy="32" r="30" fill="#FFF3D0" stroke="#F4A300" stroke-width="2"/>
+
+  <!-- Acordeón animado -->
+  <g class="accordion">
+    <rect x="18" y="20" width="8" height="24" rx="2" fill="#F4A300"/>
+    <rect x="26" y="20" width="4" height="24" rx="1" fill="#FFCD00"/>
+    <rect x="30" y="20" width="4" height="24" rx="1" fill="#FFCD00"/>
+    <rect x="34" y="20" width="4" height="24" rx="1" fill="#FFCD00"/>
+    <rect x="38" y="20" width="8" height="24" rx="2" fill="#F4A300"/>
+  </g>
+</svg>
+
+<hr>
+
+Corridos: caballo
+<svg class="corridos-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <circle cx="32" cy="32" r="30" fill="#FDF6E3" stroke="#C28F4B" stroke-width="2"/>
+
+  <!-- Caballo animado -->
+  <g class="horse">
+    <path d="M20 36c2-6 6-10 12-10s10 4 12 10c1 3 0 6-2 8h-20c-2-2-3-5-2-8z" fill="#C28F4B"/>
+    <path d="M32 26c-2-4-1-8 2-10 3 2 4 6 2 10" stroke="#C28F4B" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="32" cy="26" r="2" fill="#C28F4B"/>
+  </g>
+</svg>
+
+<hr>
+
+Gospel: manos elevadas en alabanza
+<svg class="gospel-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo celestial -->
+  <circle cx="32" cy="32" r="30" fill="#F0F8FF" stroke="#8AB6D6" stroke-width="2"/>
+
+  <!-- Manos animadas -->
+  <g class="hands">
+    <path d="M20 40c0-6 4-10 6-10s2 4 2 6v6h-8z" fill="#8AB6D6"/>
+    <path d="M44 40c0-6-4-10-6-10s-2 4-2 6v6h8z" fill="#8AB6D6"/>
+  </g>
+
+  <!-- Cruz central -->
+  <path d="M31 18h2v8h6v2h-6v6h-2v-6h-6v-2h6v-8z" fill="#4A90E2"/>
+</svg>
+
+<hr>
+
+Disco 70s: bola de espejos giratoria
+<svg class="disco-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo oscuro -->
+  <circle cx="32" cy="32" r="30" fill="#1A1A1A" stroke="#FFD700" stroke-width="2"/>
+
+  <!-- Bola de espejos animada -->
+  <g class="mirrorball">
+    <circle cx="32" cy="32" r="14" fill="#C0C0C0" stroke="#FFFFFF" stroke-width="1"/>
+    <!-- Cuadrículas de espejos -->
+    <line x1="18" y1="32" x2="46" y2="32" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="32" y1="18" x2="32" y2="46" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="24" y1="24" x2="40" y2="40" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="40" y1="24" x2="24" y2="40" stroke="#FFFFFF" stroke-width="1"/>
+  </g>
+</svg>
+
+<hr>
+
+Mariachi: Sombrero charro
+<svg class="mariachi-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <circle cx="32" cy="32" r="30" fill="#FFF5E1" stroke="#C97B00" stroke-width="2"/>
+
+  <!-- Sombrero charro animado -->
+  <g class="sombrero">
+    <path d="M16 36c4-6 12-10 16-10s12 4 16 10c-4 2-10 4-16 4s-12-2-16-4z" fill="#C97B00"/>
+    <path d="M20 34c3-4 8-6 12-6s9 2 12 6c-3 1.5-7 2.5-12 2.5S23 35.5 20 34z" fill="#FFD580"/>
+  </g>
+</svg>
+
+<hr>
+
+Cinemática: partitura con estrellas brillantes
+<svg class="cinematica-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo oscuro -->
+  <circle cx="32" cy="32" r="30" fill="#0B0F1A" stroke="#6C7A89" stroke-width="2"/>
+
+  <!-- Partitura -->
+  <path d="M20 24h24v2H20v-2zm0 8h24v2H20v-2zm0 8h24v2H20v-2z" stroke="#FFFFFF" stroke-width="1.5"/>
+
+  <!-- Estrellas animadas -->
+  <g class="stars">
+    <circle cx="18" cy="18" r="2" fill="#FFD700"/>
+    <circle cx="46" cy="20" r="1.5" fill="#FFD700"/>
+    <circle cx="40" cy="44" r="2" fill="#FFD700"/>
+  </g>
+</svg>
+
+
+<hr>
+
+SKA: Silueta saltando con ritmo
+
+<svg class="ska-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <circle cx="32" cy="32" r="30" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+
+  <!-- Silueta animada -->
+  <g class="rude-boy">
+    <!-- Sombrero -->
+    <path d="M24 20h16l-2 4H26l-2-4z" fill="#000000"/>
+    <!-- Gafas -->
+    <rect x="26" y="26" width="4" height="2" fill="#000000"/>
+    <rect x="34" y="26" width="4" height="2" fill="#000000"/>
+    <line x1="30" y1="27" x2="34" y2="27" stroke="#000000" stroke-width="1"/>
+    <!-- Cuerpo -->
+    <path d="M28 30h8v12h-8V30z" fill="#000000"/>
+    <!-- Piernas -->
+    <path d="M28 42l-4 8" stroke="#000000" stroke-width="2"/>
+    <path d="M36 42l4 8" stroke="#000000" stroke-width="2"/>
+    <!-- Brazos -->
+    <path d="M28 32l-6 4" stroke="#000000" stroke-width="2"/>
+    <path d="M36 32l6 4" stroke="#000000" stroke-width="2"/>
+  </g>
+</svg>
+
+
+<hr>
+
+Calypso: tambor tropical
+<svg class="calypso-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo tropical -->
+  <circle cx="32" cy="32" r="30" fill="#FFFBE6" stroke="#F9A825" stroke-width="2"/>
+
+  <!-- Tambor animado -->
+  <g class="drum">
+    <ellipse cx="32" cy="24" rx="12" ry="6" fill="#FFB300" stroke="#F57F17" stroke-width="2"/>
+    <rect x="20" y="24" width="24" height="16" rx="4" fill="#FDD835" stroke="#F57F17" stroke-width="2"/>
+    <ellipse cx="32" cy="40" rx="12" ry="6" fill="#FFB300" stroke="#F57F17" stroke-width="2"/>
+  </g>
+</svg>
+
+<hr>
+
+Bolero: Rosa abierta
+<svg class="bolero-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo romántico -->
+  <circle cx="32" cy="32" r="30" fill="#FDF0F2" stroke="#C2185B" stroke-width="2"/>
+  <!-- Rosa animada -->
+  <g class="rose">
+    <path d="M32 20c-4 0-8 4-8 8s4 8 8 8 8-4 8-8-4-8-8-8z" fill="#C2185B"/>
+    <path d="M32 36c-4 0-6 2-6 4s2 4 6 4 6-2 6-4-2-4-6-4z" fill="#AD1457"/>
+    <path d="M32 44c-2 0-4 1-4 2s2 2 4 2 4-1 4-2-2-2-4-2z" fill="#880E4F"/>
+  </g>
+</svg>
+
+<hr>
+
+Rock 60s: Guitarra 60s con ondas psicodélicas
+<svg class="rock60s-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo psicodélico -->
+  <circle cx="32" cy="32" r="30" fill="#F0E6FF" stroke="#8E44AD" stroke-width="2"/>
+
+  <!-- Guitarra animada -->
+  <g class="guitar60s">
+    <path d="M24 20l4 4-2 2 6 6 2-2 4 4-2 2 6 6 2-2 4 4-2 2 6 6-4 4-6-6-2 2-4-4 2-2-6-6-2 2-4-4 2-2-6-6 2-2-4-4z" fill="#8E44AD"/>
+    <!-- Ondas -->
+    <path d="M16 16c4 0 4 4 8 4s4-4 8-4 4 4 8 4 4-4 8-4" stroke="#BB8FCE" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>
+
+<hr>
+
+Country: Guitarra con sombre meciéndose
+
+<svg class="country-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo cálido -->
+  <circle cx="32" cy="32" r="30" fill="#FFF8E1" stroke="#A1887F" stroke-width="2"/>
+
+  <!-- Guitarra con sombrero animada -->
+  <g class="guitar-hat">
+    <!-- Guitarra -->
+    <rect x="28" y="20" width="8" height="24" rx="4" fill="#A1887F"/>
+    <circle cx="32" cy="32" r="4" fill="#6D4C41"/>
+    <!-- Sombrero -->
+    <path d="M24 18c2-4 12-4 14 0-2 2-10 2-14 0z" fill="#8D6E63"/>
+    <rect x="26" y="16" width="12" height="4" rx="2" fill="#A1887F"/>
+  </g>
+</svg>
+
+<hr>
+
+Bachata: Pareja bailando suve
+<svg class="bachata-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo cálido -->
+  <circle cx="32" cy="32" r="30" fill="#FFF0EB" stroke="#D84315" stroke-width="2"/>
+
+  <!-- Pareja animada -->
+  <g class="couple">
+    <!-- Figura izquierda -->
+    <path d="M26 24c-2 0-4 2-4 4s2 4 4 4c1.5 0 2.5-1 3-2l2 2v6h-6v4h8v-10l-3-3c0-2-1-5-4-5z" fill="#BF360C"/>
+    <!-- Figura derecha -->
+    <path d="M38 24c2 0 4 2 4 4s-2 4-4 4c-1.5 0-2.5-1-3-2l-2 2v6h6v4h-8v-10l3-3c0-2 1-5 4-5z" fill="#FF7043"/>
+  </g>
+</svg>
+
+<hr>
+
+Reguetón: Bocina vibrante (o auto estilo fast and furios)
+<svg class="regueton-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo vibrante -->
+  <circle cx="32" cy="32" r="30" fill="#FFF0F5" stroke="#EC407A" stroke-width="2"/>
+
+  <!-- Bocina animada -->
+  <g class="speaker">
+    <rect x="20" y="18" width="24" height="28" rx="4" fill="#EC407A"/>
+    <circle cx="32" cy="32" r="6" fill="#FFFFFF"/>
+    <circle cx="32" cy="32" r="2" fill="#EC407A"/>
+    <circle cx="32" cy="24" r="2" fill="#FFFFFF"/>
+    <circle cx="32" cy="40" r="2" fill="#FFFFFF"/>
+  </g>
+</svg>
+
+<hr>
+
+Norteño: Bajo sexto con espuelas
+<svg class="norteno-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <circle cx="32" cy="32" r="30" fill="#FFF8F0" stroke="#A0522D" stroke-width="2"/>
+
+  <!-- Bajo sexto animado -->
+  <g class="bajo">
+    <!-- Cuerpo -->
+    <path d="M24 20c-4 4-4 12 0 16s12 4 16 0 4-12 0-16-12-4-16 0z" fill="#A0522D"/>
+    <!-- Boca -->
+    <circle cx="32" cy="32" r="3" fill="#FFF8F0"/>
+    <!-- Mástil -->
+    <rect x="38" y="28" width="10" height="8" rx="2" fill="#8B4513"/>
+    <!-- Espuela -->
+    <path d="M48 32l4 4-2 2-4-4 2-2z" fill="#D2691E"/>
+  </g>
+</svg>
+
+<hr>
+
+Metal: Mano con cuernos
+
+<svg class="metal-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo oscuro -->
+  <circle cx="32" cy="32" r="30" fill="#1A1A1A" stroke="#B71C1C" stroke-width="2"/>
+
+  <!-- Mano animada -->
+  <g class="horns">
+    <!-- Palma -->
+    <rect x="28" y="24" width="8" height="20" rx="2" fill="#B71C1C"/>
+    <!-- Dedos índice y meñique levantados -->
+    <rect x="26" y="16" width="4" height="10" rx="2" fill="#B71C1C"/>
+    <rect x="34" y="16" width="4" height="10" rx="2" fill="#B71C1C"/>
+    <!-- Pulgar doblado -->
+    <path d="M28 36c-2 0-4 2-4 4s2 2 4 2v-6z" fill="#B71C1C"/>
+  </g>
+</svg>
+
+<hr>
+
+BGM: onda sonora flotante
+<svg class="bgm-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo neutro -->
+  <circle cx="32" cy="32" r="30" fill="#F4F9FF" stroke="#90CAF9" stroke-width="2"/>
+
+  <!-- Onda sonora animada -->
+  <g class="wave">
+    <path d="M16 32c4-6 8-6 12 0s8 6 12 0 8-6 12 0" stroke="#42A5F5" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M16 36c4-4 8-4 12 0s8 4 12 0 8-4 12 0" stroke="#90CAF9" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
+
+<hr>
+
+Chill: nube flotante respirando
+<svg class="chill-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo suave -->
+  <circle cx="32" cy="32" r="30" fill="#E3F2FD" stroke="#90CAF9" stroke-width="2"/>
+
+  <!-- Nube animada -->
+  <g class="cloud">
+    <ellipse cx="32" cy="32" rx="12" ry="6" fill="#BBDEFB"/>
+    <circle cx="26" cy="30" r="4" fill="#BBDEFB"/>
+    <circle cx="38" cy="30" r="4" fill="#BBDEFB"/>
+  </g>
+</svg>

@@ -6,10 +6,6 @@
   <title>Keiware Music - Canciones Personalizadas con IA</title>
   <meta name="description" content="Canciones únicas creadas con inteligencia artificial y artistas digitales. Ideal para regalos, bodas, cumpleaños y más.">
   
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Keiware Music - Canciones Personalizadas con IA" />
   <meta property="og:description" content="Canciones únicas creadas con inteligencia artificial y artistas digitales." />
@@ -22,11 +18,17 @@
   <!-- Fuente elegante -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet">
 
+  <!-- Fuente Merriweather -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
   <!-- Fuente Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/estilo.css?v=2" />
+  <link rel="stylesheet" href="css/modal.css" />
 </head>
 <!-- Botón flotante de WhatsApp -->
 <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20una%20canción%20personalizada." 
@@ -36,16 +38,16 @@
    aria-label="Contactar por WhatsApp">
   <span>💬</span>
 </a>
-<body>
+<body class="indice">
 
   <!-- Menú superior -->
-  <header class="navbar">
-    <!-- <div class="logo"><img src="img/logo_keiwaremusic_66.png" alt="Keiware Music" height="50px"></div> -->
+  <header id="menu-container" class="navbar">
     <div class="logo2"><img src="img/logo_keiwaremusic_66.png" alt="Keiware Music" height="50px"></div>
-    <div class="menu-toggle" id="menuToggle">☰</div>
+    <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</div>
     <nav class="nav-menu" id="navMenu">
       <a href="#inicio">Inicio</a>
       <a href="#ofrecemos">¿Qué ofrecemos?</a>
+      <!-- <a href="#singersteam">SingersTeam</a> --> <!-- desactivado temporalmente -->
       <a href="#muestras">Muestras</a>
       <a href="#planes">Planes</a>
       <a href="#faq">Preguntas frecuentes</a>
@@ -53,8 +55,31 @@
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
+  
 
+  <!-- WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW -->
+   <!-- me quedé solucionando el error de la hamburguesa que no funciona -->
+    <!-- Desactivé el menú dinámico, porque no logrué que funcionara -->
+  <!-- WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW -->
+
+<!--
+  <header class="navbar">
+  <div class="logo2"><img src="img/logo_keiwaremusic_66.png" alt="Keiware Music" height="50px"></div>
+  <div class="menu-toggle" id="menuToggle">☰</div>
+  <nav class="nav-menu" id="navMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#ofrecemos">¿Qué ofrecemos?</a>
+      <a href="#singersteam">SingersTeam</a>
+      <a href="#muestras">Muestras</a>
+      <a href="#planes">Planes</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+-->
   <!-- Banner carrusel -->
+<!--
   <section class="carrusel" id="inicio">
     <div class="carrusel-contenedor" id="carruselContenedor">
       <img src="img/banners/banner1.jpg" alt="Banner 1" onclick="window.location='ban1.html'">
@@ -65,25 +90,32 @@
       <span class="carrusel-btn" onclick="cambiarCarrusel(-1)">‹</span>
   <span class="carrusel-btn" onclick="cambiarCarrusel(1)">›</span>
     </div>
+-->
     <!-- Indicador de progreso: barra y contador de segundos -->
+<!--
     <div class="carrusel-progreso" aria-hidden="false">
       <div class="progreso-barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <div class="progreso-fill" id="progresoFill"></div>
       </div>
     </div>
   </section>
-
+-->
   <!-- Presentación -->
-  <section class="seccion">
+  <section class="seccion" id="inicio">
     <h2><img src="img/viñetas/secc_canciones.png" alt="Viñeta" class="titulo-vineta"> Canciones Personalizadas con IA</h2>
     <div class="dos-columnas">
       <div class="col-img">
         <img src="img/viñetas/icon_cancionespersonalizadas.png" alt="Icono IA">
       </div>
       <div class="col-texto">
-        <p>Una canción personalizada te brinda la oportunidad de convertir tus emociones e ideas en melodías únicas y originales, creadas especialmente para esa persona especial o para ti mismo.<br><br>
-          Ya sea para un cumpleaños, boda, aniversario, graduación o simplemente para expresar tus sentimientos, una canción personalizada es un regalo inolvidable que captura momentos y recuerdos de manera auténtica.<br><br>
-          En Keiware Music, combinamos la creatividad humana con la potencia de la inteligencia artificial, para ofrecerte canciones que no solo suenan profesionales, sino que también resuenan emocionalmente contigo.<br><br>
+        <p>Una canción personalizada te brinda la oportunidad de convertir tus emociones e ideas en melodías únicas y originales, creadas especialmente para esa persona especial o para ti mismo.
+          <div class="BRChico"></div>
+          <h3 class="inicio_estilos">Cumpleaños · Dedicatorias · Aniversario · Declaraciones · Reconocimientos · Graduación<br>
+          Boda · Ambientación Musical · Desahogo · Bromas · Playlist Personal o Motivacional</h3>
+          <div class="BRChico"></div>
+          Expresar tus sentimientos en una canción personalizada, es un regalo inolvidable que captura momentos y recuerdos de manera auténtica.
+          Combinamos la creatividad humana con la potencia de la inteligencia artificial, para ofrecerte canciones que no solo suenan profesionales, sino que también resuenan emocionalmente contigo.
+          <div class="BRChico"></div>
           ¡Haz que cada ocasión sea aún más especial con una canción hecha a tu medida!
         </p>
       </div>
@@ -93,133 +125,172 @@
   <!-- ¿Qué ofrecemos? -->
   <section class="seccion" id="ofrecemos">
     <h2><img src="img/viñetas/secc_ofrecemos.png" alt="Viñeta" class="titulo-vineta"> ¿Qué ofrecemos?</h2>
-    <p>Creamos canciones desde cero con nuestros letristas expertos, voces de artistas digitales únicos y software musical profesional.<br><br>
+    <p>Creamos canciones originales desde cero con nuestros letristas artísticos, voces de cantantes digitales únicos y software de producción musical profesional.
+      <div class="BRChico"></div>
       Ofrecemos:</p>
-    <ul>
-      <li>✅ Catálogo de géneros con más de 10 opciones: pop, balada, rock, infantil, bachata, mariachi, norteño, reguetón, electrónica, metal, ska, bolero, BGM, etc.</li>
-      <li>✅ Voces masculinas y femeninas, con presencia melódica y con emociones vibrantes.</li>
-      <li>✅ Duración de canciones: Deste 1:30 hasta 4:00 minutos (dependiendo el plan)</li>
-      <li>✅ 3 ajustes de letra sin costo adicional.</li>
-      <li>✅ Opción de elegir entre 2 demos (en plan estándar o premium).</li>
-      <li>✅ Entrega desde 3 días hábiles (plan express) por WhatsApp o correo, en formato MP3 de alta calidad.</li>
-      <li>✅ Opción de video musical (con costo adicional), con la letra de la canción, imagen fija de fondo y efecto básico de animación.</li>
+    <ul class="ListaChecks">
+      <li>Catálogo de más de 20 estilos musicales: <i class="TextoImportante">pop, balada, rock, infantil, bachata, mariachi, norteño, reguetón, electrónica, metal, ska, bolero, BGM y más.</i></li>
+      <li>Próxicamente: Catálogo <i class="TextoImportante">SingersTeam</i>, com más de 10 artistas digitales de voces vibrantes (en plan Premium).</li>
+      <li>Duración de canciones: <i class="TextoImportante">desde 1:30 hasta 5:00 minutos (dependiendo el plan).</i></li>
+      <li>Hasta 5 ajustes de letra sin costo adicional (en plan Premium).</li>
+      <li>Entrega por WhatsApp o correo en formato MP3 de alta calidad.</li>
+      <li>Opción de video con imagen o fotos fijas, con costo adicional (sin costo en plan Premium).</li>
+      <li>Link del video en nuestro canal de YouTube (público o privado).</li>
     </ul>
-    <br>
-    <!-- Enlace a artistas digitales -->
-    <div class="artistas-enlace">
-      <h3>Conoce a algunos de nuestros Artistas Digitales:</h3>
-      <div class="collage-artistas">
-        <a class="artista-link" href="artistas-digitales.html" aria-label="Perfil de Ana Hash">
-          <figure class="artista-item">
-            <img src="img/artistas/ana_hash.jpg" alt="Ana Hash" title="Ana Hash">
-            <figcaption>
-              <div class="genero">Baladas</div>
-              <div class="bio">De ascedencia española y mexicana, con voz melodiosa y emotiva</div>
-            </figcaption>
-          </figure>
-        </a>
-
-        <a class="artista-link" href="artistas-digitales.html" aria-label="Perfil de Eduardo Montiel">
-          <figure class="artista-item">
-            <img src="img/artistas/eduardo_montiel.jpg" alt="Eduardo Montiel" title="Eduardo Montiel">
-            <figcaption>
-              <div class="genero">Banda / Corridos</div>
-              <div class="bio">De raíces mexicanas, con timbre cálido que te atrapa</div>
-            </figcaption>
-          </figure>
-        </a>
-
-        <a class="artista-link" href="artistas-digitales.html" aria-label="Perfil de Lyra Skye">
-          <figure class="artista-item">
-            <img src="img/artistas/lyra_skye.jpg" alt="Lyra Skye" title="Lyra Skye">
-            <figcaption>
-              <div class="genero">Trance progresivo / DJ</div>
-              <div class="bio">Desde los fiordos y auroras noruegas, con excepcional voz melodiosa</div>
-            </figcaption>
-          </figure>
-        </a>
-      </div>
-      <p><a href="artistas-digitales.html" class="boton-artistas">Explora todos los perfiles →</a></p>
-    </div>
   </section>
 
+  
+  <!-- WWWWWWWWWWWWWWWWWWWWWWWWWWW  DEMOS  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW -->
   <!-- Muestras -->
   <section class="seccion" id="muestras">
     <h2><img src="img/viñetas/secc_demos.png" alt="Viñeta" class="titulo-vineta"> Muestras de Canciones</h2>
-    <p>Escucha algunos de nuestros demos propios y de clientes.</p>
-    
+    <p>Escucha algunos de nuestros demos promocionales y para clientes, en diversos  <span id="abrirModalEstilos" class="estilos-musicales">estilos musicales</span> ← da click para ver la lista completa de estilos</p>
+
     <div class="tabla-muestras">
       <!-- Fila 1 -->
-      <div class="muestra">
-        <img src="img/muestras/muestra1.jpg" alt="Boda">
-        <h3>Boda de Clara</h3>
+      <div class="muestra"> <!-- Demo 1 -->
+        <img src="img/muestras/hermosa_fantasia.jpg" alt="Hermosa Fantasía" id="portadaDemo">
+        <div class="Titulo-Demo">Hermosa fantasía</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Fernando Del Real</a></li>
+          <li><span class="texto-italica">Estilo: </span>Disco, Pop 70s</li>
+          <li><span class="texto-italica">Duración original: </span>3:45 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Un joven de preparatoria recuerda a su amor del colegio</li>
+        </ul>
         <audio controls id="audio1">
-          <source src="audios/muestra1.mp3" type="audio/mpeg">
+          <source src="audios/Hermosa_Fantasía-Fernando_Del_Real-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="muestra">
-        <img src="img/muestras/muestra2.jpg" alt="Cumpleaños">
-        <h3>Cumple Papá</h3>
+      <div class="muestra"> <!-- Demo 2 -->
+        <img src="img/muestras/sala_vacia.jpg" alt="Sala Vacía">
+        <div class="Titulo-Demo">Sala Vacía</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Lucio Varela</a></li>
+          <li><span class="texto-italica">Estilo: </span>Balada, guitarra</li>
+          <li><span class="texto-italica">Duración original: </span>2:36 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Melancolía de un hombre con sentimientos de incomprensión</li>
+        </ul>
         <audio controls id="audio2">
-          <source src="audios/muestra2.mp3" type="audio/mpeg">
+          <source src="audios/Sala_Vacia-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="muestra">
-        <img src="img/muestras/muestra3.jpg" alt="Aniversario">
-        <h3>25 Años Juntos</h3>
+      <div class="muestra"> <!-- Demo 3 -->
+        <img src="img/muestras/pensamiento_fugaz.jpg" alt="Pensamiento fugáz">
+        <div class="Titulo-Demo">Pensamiento fugáz</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Marisela Reina</a></li>
+          <li><span class="texto-italica">Estilo: </span>Ranchera / Mariachi</li>
+          <li><span class="texto-italica">Duración original: </span>3:52 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>El anhelo de una mujer que desea ser recordada y valorada</li>
+        </ul>
         <audio controls id="audio3">
-          <source src="audios/muestra3.mp3" type="audio/mpeg">
+          <source src="audios/Pensamiento_Fugaz-Marisela_Reina-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
         </audio>
       </div>
 
       <!-- Fila 2 -->
-      <div class="muestra">
-        <img src="img/muestras/muestra4.jpg" alt="Graduación">
-        <h3>Graduación 2024</h3>
+      <div class="muestra"> <!-- Demo 4 -->
+        <img src="img/muestras/entre_libros_y_madrugadas.jpg" alt="Entre libros y madrugadas">
+        <div class="Titulo-Demo">Entre libros y madrugadas</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Matías Soto</a></li>
+          <li><span class="texto-italica">Estilo: </span>Rock progresivo</li>
+          <li><span class="texto-italica">Duración original: </span>4:44 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Reconocimiento de los padres a su hijo recién graduado</li>
+        </ul>
         <audio controls id="audio4">
-          <source src="audios/muestra4.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      <div class="muestra">
-        <img src="img/muestras/muestra5.jpg" alt="Amistad">
-        <h3>Amigos de Siempre</h3>
-        <audio controls id="audio5">
-          <source src="audios/muestra5.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      <div class="muestra">
-        <img src="img/muestras/muestra6.jpg" alt="San Valentín">
-        <h3>San Valentín</h3>
-        <audio controls id="audio6">
-          <source src="audios/muestra6.mp3" type="audio/mpeg">
+          <source src="audios/Entre_Libros_y_Madrugadas-Matías_Soto-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
         </audio>
       </div>
 
-      <!-- Fila 3 -->
-      <div class="muestra">
-        <img src="img/muestras/muestra7.jpg" alt="Bienvenida">
-        <h3>Bienvenida al Bebé</h3>
+      <div class="muestra"> <!-- Demo 5 -->
+        <img src="img/muestras/vamos_a_celebrar_tropical.jpg" alt="Vamos a Celebrar (Tropical)">
+        <div class="Titulo-Demo">Vamos a Celebrar (Tropical)</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span>Varios (acento caribeño)</li>
+          <li><span class="texto-italica">Estilo: </span>Calypso / Tropical / Fiesta</li>
+          <li><span class="texto-italica">Duración original: </span>2:35 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Alegre canción grupal para cumpleaños, con toque tropical</li>
+        </ul>
+        <audio controls id="audio5">
+          <source src="audios/Vamos_a_Celebrar_Tropical-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="muestra"> <!-- Demo 6 -->
+        <img src="img/muestras/eres_mi_razon.jpg" alt="Eres Mi Razón">
+        <div class="Titulo-Demo">Eres Mi Razón</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span>Voz masculina</li>
+          <li><span class="texto-italica">Estilo: </span>Balada romántica</li>
+          <li><span class="texto-italica">Duración original: </span>4:15 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Dedicatoria y reconocimiento románticos de un joven a su pareja</li>
+        </ul>
+        <audio controls id="audio6">
+          <source src="audios/Eres_Mi_Razon_KeiwareMusic-DEMO.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+<!-- Pienso que una mejora sería usar iconos para identificar voz, géneros y estilos -->
+
+<!-- Fila 3 -->
+      <div class="muestra"> <!-- Demo 7 -->
+        <img src="img/muestras/amor_imposible.jpg" alt="Amor Imposible">
+        <div class="Titulo-Demo">Amor Imposible</div>
+        <ul class="descripcion-demo">
+          <li>Demo promocional KeiwareMusic</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Lía Vega</a></li>
+          <li><span class="texto-italica">Estilo: </span>ElectroPop / Dance-Pop</li>
+          <li><span class="texto-italica">Duración original: </span>2:33 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Anhelo de una mujer por su amor imposible</li>
+        </ul>
         <audio controls id="audio7">
-          <source src="audios/muestra7.mp3" type="audio/mpeg">
+          <source src="audios/Amor_Imposible-Lia_Vega-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="muestra">
-        <img src="img/muestras/muestra8.jpg" alt="Despedida">
-        <h3>Despedida Laboral</h3>
+
+      <div class="muestra"> <!-- Demo 8 -->
+        <img src="img/muestras/robocop_corporativo.jpg" alt="Robocop Corporativo">
+        <div class="Titulo-Demo">Robocop Corporativo</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span><a href="singersteam.html" class="perfil-artista">Los Skamales Verdes</a></li>
+          <li><span class="texto-italica">Estilo: </span>Ska</li>
+          <li><span class="texto-italica">Duración original: </span>3:32 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Un trabajador frustado pero decidido, se desahoga de su jefe</li>
+        </ul>
         <audio controls id="audio8">
-          <source src="audios/muestra8.mp3" type="audio/mpeg">
+          <source src="audios/Robocop_Corporativo-Los_Skamales_Verdes-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
         </audio>
       </div>
-      <div class="muestra">
-        <img src="img/muestras/muestra9.jpg" alt="Homenaje">
-        <h3>Homenaje a Mamá</h3>
+
+      <div class="muestra"> <!-- Demo 9 -->
+        <img src="img/muestras/bajo_el_mismo_azul.jpg" alt="Homenaje">
+        <div class="Titulo-Demo">Bajo el Mismo Azul</div>
+        <ul class="descripcion-demo">
+          <li>Pedido del cliente</li>
+          <li><span class="texto-italica">Artista digital: </span>Dueto hombre y mujer</li>
+          <li><span class="texto-italica">Estilo: </span>Balada</li>
+          <li><span class="texto-italica">Duración original: </span>3:41 minutos</li>
+          <li class="texto_historia"><span class="texto-italica">Historia: </span>Un homenaje y agradecimiento a la Familia Rodríguez</li>
+        </ul>
         <audio controls id="audio9">
-          <source src="audios/muestra9.mp3" type="audio/mpeg">
+          <source src="audios/Para_Mi_Familia_Bajo_el_Mismo_Azul-KeiwareMusic-DEMO.mp3" type="audio/mpeg">
         </audio>
       </div>
     </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <p><a href="demos.html" class="boton-artistas">Escucha más demos →</a></p>
+    </div>
   </section>
 
+  <!-- wwwwwwwwwwwwwwwwwwwwwwwwwww  PLANES  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW -->
   <!-- Planes -->
   <section class="seccion" id="planes">
     <h2><img src="img/viñetas/secc_planes.png" alt="Viñeta" class="titulo-vineta"> Nuestros Planes</h2>
@@ -227,44 +298,68 @@
       <div class="plan">
         <h3>Express</h3>
         <ul>
-          <li>Letra básica</li>
-          <li>1 voz estándar</li>
-          <li>Entrega en 72h</li>
-          <li>Sin revisiones</li>
+          <li>No se incluyen revisiones de letra</li>
+          <li>Voz genérica masculina o femenina<sup>1</sup></li>
+          <li>Catálogo <u>esencial</u> de 10 estilos musicales<sup>2</sup></li>
+          <li>Hasta 3 estrofas + coro</li>
+          <li>Hasta 2:30 minutos. Calidad estándar de voces e instrumentos</li>
+          <li>La canción se entrega sin demos previos</li>
+          <li>Entrega en 3 días hábiles</li>
         </ul>
-        <div class="precio">$29</div>
+        <div class="precio">$350<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20Express." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
       </div>
       <div class="plan">
         <h3>Estándar</h3>
         <ul>
-          <li>Letra personalizada</li>
-          <li>2 voces a elegir</li>
-          <li>Entrega en 5 días</li>
-          <li>2 revisiones</li>
+          <li>Hasta 3 revisiones de letra incluídas</li>
+          <li>Voz genérica masculina o femenina<sup>1</sup></li>
+          <li>Catálogo <u>esencial</u> de 10 estilos musicales<sup>2</sup></li>
+          <li>Hasta 4 estrofas + coro</li>
+          <li>Hasta 3:30 minutos. Calidad estándar de voces e instrumentos</li>
+          <li>2 demos para elegir la versión final</li>
+          <li>Entrega en 5 días hábiles, después de tener la letra defintiva</li>
+          <li>Opción de video con imagen fija y letra de la canción, con costo adicional<sup>4</sup></li>
         </ul>
-        <div class="precio">$59</div>
+        <div class="precio">$500<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20Estándar." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
       </div>
       <div class="plan premium">
         <h3>Premium</h3>
         <ul>
-          <li>Letra premium + metáforas</li>
+          <li>Hasta 5 revisiones de letra incluídas</li>
           <li>Acceso a todos los artistas digitales</li>
-          <li>Entrega en 7 días</li>
-          <li>Revisiones ilimitadas</li>
-          <li>Video musical incluido</li>
+          <li>Catálogo <u>extendido</u> + de 20 estilos musicales<sup>3</sup></li>
+          <li>Hasta 6 estrofas + coros intermedio y final</li>
+          <li>Hasta 5:00 minutos. Calidad premium de voces e instrumentos</li>
+          <li>2 demos para elegir la versión final</li>
+          <li>Entrega en 8 días hábiles, después de tener la letra definitiva</li>
+          <li>Video con imagen fija de fondo y letra de la canción, incluido</li>
         </ul>
-        <div class="precio">$129</div>
+        <div class="precio">$850<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20Premium." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
       </div>
       <div class="plan">
         <h3>BGM</h3>
         <ul>
           <li>Solo instrumental</li>
           <li>Sin voz</li>
-          <li>Para videos, podcasts</li>
-          <li>Entrega en 48h</li>
+          <li>Para presentaciones, video-tutoriales, podcasts o ambientación</li>
+          <li>Cualquier estilo musical del catálogo completo (+ de 20 estilos)</li>
+          <li>Hasta 3:00 minutos. Calidad estándar de instrumentos</li>
+          <li>Entrega en 48hrs hábiles</li>
         </ul>
-        <div class="precio">$19</div>
+        <div class="precio">$150<span class="plan-precio-mxn">MXN</span></div>
+        <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20el%20plan%20BGM." target="_blank"  class="boton-waplan">Solicitar vía Whatsapp</a>
       </div>
+    </div>
+    <div class="observaciones_planes">
+      • Las letras son originales y escritas por nuestros letristas artísticos, basadas en la información que nos proporciones.<br>
+      • El boceto de la letra se entrega en 2 a 3 días hábiles en los planes Estándar y Premium. En el plan Express se entrega junto con el mp3 en cuanto la canción esté lista.<br>
+      <sup>1</sup> Debido a la generación por IA, las voces genéricas pueden tener acentos castellanos. El plan Premium ofrece el catálogo SingersTeam, con opciones de voces más naturales y expresivas.<br>
+      <sup>2</sup> El catálogo esencial incluye 10 estilos: Balada, Pop, Rock, Infantil/Festivo, Bolero, Cumbia, Bachata, Mariachi, Norteño y Reguetón.<br>
+      <sup>3</sup> El catálogo extendido incluye además de los anteriores: Corridos, Electrónica, Metal, Ska, Calypso, Country, Rock 60s, Disco 70s, Cinemática, Chill y Gospel.<br>
+      <sup>4</sup> El video con imagen fija y letra de la canción tiene un costo adicional de $150 MXN en el plan Estándar. En el plan Premium está incluido sin costo adicional. La imagen es generada con base en la letra de la canción o puede usarse alguna otorgada por el cliente.
     </div>
   </section>
 
@@ -273,74 +368,243 @@
   <a href="https://wa.me/+5214438582775?text=Hola,%20quiero%20contratar%20una%20canción%20personalizada." 
      target="_blank" 
      class="boton-whatsapp">
-    <span>📱</span> ¡Contrata aquí! (44 3858 2775)
+    <span><img src="img/viñetas/whatsapp.png"></span> ¡Contrata aquí! (44 3858 2775)
   </a>
 </div>
 
-
+  <!-- WWWWWWWWWWWWWWWWWWWWWWWWWWWW  FAQ  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW-->
   <!-- FAQ -->
   <section class="seccion" id="faq">
     <h2><img src="img/viñetas/secc_preguntas.png" alt="Viñeta" class="titulo-vineta"> Preguntas Frecuentes</h2>
     <div class="faq-item" onclick="toggleFaq(this)">
-      <h3><span class="lista-simbolo">›</span> ¿Puedo elegir el género y la voz?</h3>
+      <h3><span class="lista-simbolo">▸</span> ¿Cuál es el proceso de contratación o compra?</h3>
       <div class="faq-respuesta">
-        <p>Sí, tienes acceso a nuestro catálogo de géneros y artistas digitales con distintas emociones y estilos.</p>
+          1. Elige el plan de tu agrado, teniendo en mente si deseas voz masculina o femenina y el estilo musical.<br>
+          2. Compártenos tus ideas, emociones o historia para tu canción, destacando de 3 a 5 aspectos importantes. <br>
+          3. Crearemos un boceto de la letra para que la revises y hagamos los cambios o ajustes necesarios (en plan Estándar hasta 3 revisiones o cambios y en Premium hasta 5).<br>
+          4. Recibimos tu anticipo del 50% y crearemos 2 demos de tu canción (1 estrofa y coro), para que elijas la versión de tu agrado (solo en plan Estándar y Premium).<br>
+          5. Después de recibir el 50% restante de tu pago, te enviaremos tu canción en mp3 por correo o Whatsapp.<br>
+          <div class="BRChico"></div>
+          En el caso del plan Express, se aplican los pasos 1 y 2, para posteriormente recibir tu pago del 100% por adelantado y en 3 días hábiles te entregamos tu canción en mp3, junto con la letra. Toma en cuenta que este plan no ofrece revisiones de la letra.<br>
+          Para el plan BGM solo compártenos el uso de tu melodía y te sugeriremos un estilo musical adecuado. Recibimos tu pago del 100% por ancipado y en 48 hrs te entregamos tu canción mp3. No se pueden realizar cambios al estilo musical, ya que se cobraría como una nueva canción.
       </div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
-      <h3><span class="lista-simbolo">›</span>  ¿Cuánto tiempo tardan en hacer la canción?</h3>
+      <h3><span class="lista-simbolo">▸</span>  ¿Qué son las revisiones de la letra?</h3>
       <div class="faq-respuesta">
-        <p>Depende del plan: desde 48 horas (Express) hasta 7 días (Premium).</p>
+        Las revisiones son cambios o ajustes que deseas hacer a la letra de tu canción después de recibir el boceto inicial. Puedes solicitar modificaciones en la estructura, palabras, frases o temas para asegurarte de que la letra refleje exactamente lo que quieres expresar.
+        <div class="BRChico"></div>
+        Una revisión puede abarcar un grupo de cambios menores como cambios de palabras o frases, hasta el cambio del tema de la canción y se contabiliza como revisión, cada vez que se te entrega una letra actualizada con los cambios solicitados.<br>
+        Por ejemplo, si nos solicitas un cambio de una frase y nos pides ver cómo quedaría la letra con ese cambio, contaría como revisión, por lo que te recomendamos que revises detenidamente toda la letra, para que nos solicites todos los cambios en conjunto
+        y así aprovechar al máximo las revisiones incluidas en tu plan.
+      </div>
+    </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">▸</span>  ¿Cuánto tiempo tardan en hacer la canción?</h3>
+      <div class="faq-respuesta">
+        Depende del plan: desde 48 horas (BGM) hasta 8 días (Premium), mas 2 días hábiles para crear el boceto de la letra y mas el tiempo requerido para los ajustes de la letra, que comprende al menos,
+        de 2 a 3 días hábiles.
+        <div class="BRChico"></div>
+        Por lo general, una canción tarda entre 1 y 2 semanas en completarse, dependiendo la cantidad los ajustes requeridos y la recepción de los pagos correspondientes.
       </div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
-      <h3><span class="lista-simbolo">›</span>  ¿Puedo usar la canción comercialmente?</h3>
+      <h3><span class="lista-simbolo">▸</span>  ¿Cuántos géneros o estilos musicales ofrecen?</h3>
       <div class="faq-respuesta">
-        <p>Los planes Premium incluyen licencia comercial. Los demás son para uso personal.</p>
+        Contamos con más de 20 estilos musicales, divididos en 2 catálogos:<br>
+        <div class="BRChico"></div>
+        <b>Catálogo esencial</b>: Balada, Pop, Rock, Infantil/Festiva, Bolero, Cumbia, Bachata, Mariachi, Norteño y Reguetón.<br>
+        <b>Catálogo extendido</b>: Corridos, Electrónica, Metal, Ska, Calypso, Country, Rock 60s, Disco 70s, Cinemática, Chill y Gospel.        
       </div>
     </div>
     <div class="faq-item" onclick="toggleFaq(this)">
-      <h3><span class="lista-simbolo">›</span>  ¿Y si no me gusta el resultado?</h3>
+      <h3><span class="lista-simbolo">▸</span>  ¿Qué garantía tengo de que sí realicen la canción, después de mi pago?</h3>
       <div class="faq-respuesta">
-        <p>Ofrecemos revisiones según tu plan. En Premium, hasta que quedes 100% satisfecho.</p>
+        Aunque KeiwareMusic tiene 2 años de estar en funciones como proveedor de servicios musicales, depende de Keiware México, una emppresa con más de 25 años de servicio en el ramo del diseño gráfico, comercialización de productos y servicios industriales y ahora como productores musicales con IA,
+        lo que nos permite ofrecer la seguridad de tu compra.
+        <div class="BRChico"></div>
+        Además, para los residentes de Morelia Michoacán, contamos con un módulo físico para la recepción de sus anticipos y pagos.<br>
+        Ofrecemos también facturas fiscales válidas para México, ya que estamos legalmente constituidos en el SAT, con domicilio fiscal en Morelia Michoacán.<br>
+        Para compras internacionales, ofrecemos medios de pago por PayPal y MercadoPago, que cuentan con sistemas de verificación de usuarios, para mayor seguridad.<br>
+      </div>
+    </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">▸</span>  ¿Puedo usar la canción comercialmente?</h3>
+      <div class="faq-respuesta">
+        Si, desde luego, sin embargo la propiedad intelectual y los derechos por regalías en caso de un uso con fines de lucro, seguirán a nombre de Keiware México, hasta no ser revocados por motivo de cesión o venta.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">▸</span>  ¿Hay cancelación en la compra?</h3>
+      <div class="faq-respuesta">
+        Si, con ciertas restricciones. Es importante considerar que en caso de anticipos después de entregado el boceto de la letra, dichos anticipos no se devolverán, pues contemplan el trabajo de los letristas ya realizado.
+        Si se solicita la cancelación antes de la entrega final, es posible que se cobre un 20% del pago restante, debido al avance de la canción final.
+        <div class="BRChico"></div>
+        En los casos del plan Express y BGM, se aplicará un cargo del 20% del pago total, si el trabajo de los letristas o producción, ya hubiera comenzado.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">▸</span>  ¿Pueden incluir fotos personales en el video?</h3>
+      <div class="faq-respuesta">
+        Se puede agregar 1 foto del cliente en el video, por el precio indicado de acuerdo al plan.
+        Si deseas incluir más fotos, el costo adicional es de $50 MXN por hasta 10 fotos en total.<br>
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">▸</span>  ¿Por qué usan YouTube para subir los videos solicitados?</h3>
+      <div class="faq-respuesta">
+        YouTube es la plataforma por excelencia para compartir videos, ya que permite una fácil visualización en cualquier dispositivo, sin necesidad de descargar archivos pesados.
+        Además, ofrece opciones de privacidad, permitiendo que los videos sean públicos o privados, según las preferencias del cliente.<br>
+        Solo se necesita un enlace para ver el video en línea, sin preocuparse por problemas de compatibilidad o almacenamiento.
+        <div class="BRChico"></div>
+        En Keiware Music, nos aseguramos de que cada video subido a YouTube cumpla con los estándares de calidad y privacidad, brindando a nuestros clientes una experiencia segura y satisfactoria.
+        <div class="BRChico"></div>
+        Adicionalmente, si lo solicitas, podemos enviar el video en formato MP4 por correo electrónico.          
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">▸</span>  ¿Qué pasa si necesito más de 5 revisiones?</h3>
+      <div class="faq-respuesta">
+        En nuestra experiencia, 5 revisiones son suficientes en la gran mayoría de los casos, además que esto nos permite reducir considerablemente el tiempo de entrega de tu canción, pues cada revisión
+        puede tardar hasta 24hrs en reflejarse en tu letra final. Sin embargo, si necesitas revisiones adicionales, cada una tiene un costo adicional de $20 MXN.
+        <div class="BRChico"></div>
+        Te recomendamos revisar cuidadosamente la letra en cada entrega para minimizar la necesidad de revisiones adicionales.
+        <div class="BRChico"></div>
+        Nuestro objetivo es asegurarnos de que estés completamente satisfecho con la letra de tu canción, por lo que trabajaremos contigo para hacer los ajustes necesarios dentro del límite de revisiones incluidas en tu plan.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <h3><span class="lista-simbolo">▸</span>  ¿Puedo solicitar la voz de un artista famoso?</h3>
+      <div class="faq-respuesta">
+        Por reglamentaciones de copyright y derechos de autor, no podemos ofrecer voces de artistas famosos o reconocidos.
+        Sin embargo, contamos con un catálogo diverso de voces genéricas y artistas digitales únicos, cada uno con su propio estilo y personalidad emocional, para que puedas encontrar la voz perfecta para tu canción personalizada.
+        <div class="BRChico"></div>
+        Nuestro objetivo es brindarte una experiencia musical auténtica y original, respetando siempre los derechos de los artistas y las leyes vigentes en materia de propiedad intelectual.
       </div>
     </div>
   </section>
 
+  <!-- WWWWWWWWWWWWWWWWWWWWWWWWWWWW  NOSOTROS  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW-->
   <!-- Nosotros -->
   <section class="seccion" id="nosotros">
-    <h2><img src="img/viñetas/secc_nosotros.png" alt="Viñeta" class="titulo-vineta"> Nosotros</h2>
-    <p>Keiware Music nació en 2022 con una misión: democratizar la creación musical personalizada. Hoy, servimos a clientes en más de 15 países, desde México hasta Japón.</p>
-    <p>Nuestro equipo incluye letristas premiados, ingenieros de sonido con experiencia en estudios profesionales, y una red de artistas digitales únicos, cada uno con su propia "personalidad emocional".</p>
-    <p>Usamos software profesional como Ableton Live, Melodyne y modelos de IA de última generación para garantizar calidad de estudio en cada entrega.</p>
+    <div class="nosotros_texto">      
+      <h2><img src="img/viñetas/secc_nosotros.png" alt="Viñeta" class="titulo-vineta"> Nosotros</h2>
+      <div style="text-align: center;"><img src="img/logo_keiwaremusic_500.png" class="logo-500"></div>
+      <h3>Inicios</h3> Keiware Music nace en 2020 como un proyecto de creación de canciones para Karaoke e instrumentales, mediante el uso de software profesional como FL Studio y con samples de instrumentos reales,
+      creando versiones de gran calidad, que aún persisten en canales de YouTube o en catálogos comerciales.
+      <div class="BRChico"></div>
+      En 2022 damos el paso al uso de la Inteligencia Artificial para crear las primeras canciones, con una calidad aceptable, pero aún lejos de alcanzar un estándar a costos accesibles para el público en general,
+      dirigiendo nuestro trabajo hacia artistas y medios de comunicación específicos, incluso en otros países como Perú.
+      <div class="BRChico"></div>
+      En 2024 lanzamos nuestras primeras canciones con la versión 2.0 de nuestros módulos de IA, logrando una calidad muy superior a la anterior, pero aún sin tener un catálogo especializado por estilos musicales
+      o estilos de voz.
+      <div class="BRChico"></div>
+      <h3>SingersTeam</h3>
+      A mediados del 2025 llegamos a la versión 3.0, lo que nos permitió ampliar nuestros estilos musicales, más variedad de voces y dinamismo en emociones vocales. En Agosto de este mismo año, formamos el SingersTeam,
+      un catálogo de artistas digitales, fáciles de identificar por estilo musical y creando biografías digitales, que permitan al cliente identificarse con el estilo de cada artista y sentir más de cerca la
+      emoción y sentimiento de las canciones. Este catálgo crece cada día con más artistas, algunos con esencias de origen que pueden percibirse, incluso con acentos latinos ahora.
+      <div class="BRChico"></div>
+      <h3>Equipo de profesionales</h3>
+      Nuestro equipo cuenta con letristas artísticos reales, con más de 30 años de experiencia en el campo musical, colaboradores de España, ingenieros de sonido con experiencia en
+      producción asistida por computadora y técnicos en IA que en conjunto, han creado el SingersTeam, donde cada artista digital cuenta con su propia personalidad emocional.<br>
+      Colaboramos a distancia gracias a las plataformas de comunicación tradicionales, para ofrecer canciones vibrantes, sin importar barreras geográficas.
+      <div class="BRChico"></div>
+      <h3>Nuestra Visión</h3>
+      Tenemos firme nuestro propósito de despertar emociones profundas en las personas que escuchan los pensamientos de sus seres queridos, mediante nuestras canciones, con la sensibilidad y profesionalismo que un evento como una dedicatoria
+      o un reconocimiento, ameritan, a través de un proceso simple, humano y personalizado, aprovechando selectivamente las extraordinarias ventajas de la Inteligencia Artificial, manteniendo siempre, el sentido humano de las emociones.
+      <div class="BRChico"></div>
+      Tenemos aún varias metas por lograr en este camino musical, siempre buscando una experiencia superior para todos nuestros clientes.
+      <div class="BRChico"></div>
+      ¡Gracias por confiar en nosotros para transformar tus ideas y emociones en música!
+    </div>
   </section>
 
   <!-- Contacto -->
+  <div id="contacto-container"></div>
+  <script src="js/contacto.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('contacto-container').innerHTML = contactoHTML;
+    });
+  </script>
+<!--
   <section class="seccion" id="contacto">
     <h2><img src="img/viñetas/secc_contacto.png" alt="Viñeta" class="titulo-vineta"> Contacto</h2>
     <div class="contacto-info">
-      <p>📱 WhatsApp: +52 1 443 858 2775</p>
-      <p>✉️ Email: keiwaremusic@gmail.com</p>
-      <p>📞 Teléfono: +52 1 443 614 7779</p>
-      <div class="redes">
-        <a href="#">Instagram</a> •
-        <a href="#">TikTok</a> •
-        <a href="#">YouTube</a>
-      </div>
     </div>
+    <section class="tres-columnas-contacto">
+      <div class="columnac">
+       <img src="img/viñetas/ico_whatsapp.png">WhatsApp<div class="BRChico"></div>
+        <h3>+52 1 44 3858 2775</h3>
+      </div>
+      <div class="columnac">
+        <img src="img/viñetas/ico_correo.png">Correo<div class="BRChico"></div>
+        <h3>keiwaremusic@gmail.com</h3>
+      </div>
+      <div class="columnac">
+        <img src="img/viñetas/ico_telefono.png">Teléfono<div class="BRChico"></div>
+        <h3>443 614 7779</h3>
+      </div>
+-->
+<!--      <div class="columnac" style="flex-basis: 250px;">
+        <a href="#"><img src="img/viñetas/ico_facebook.png">Facebook</a> &nbsp; &nbsp; &nbsp;
+        <a href="#"><img src="img/viñetas/ico_instagram.png">Instagram</a> &nbsp; &nbsp; &nbsp;
+        <a href="#"><img src="img/viñetas/ico_tiktok.png">TikTok</a> &nbsp; &nbsp; &nbsp;
+        <a href="#"><img src="img/viñetas/ico_youtube.png">YouTube</a>
+      </div>
+    </section>
   </section>
+-->
 
-  <!-- Pie de página -->
+  <!-- Modal PuntosPremia -->
+  <div id="overlay">
+    <div id="modal" role="dialog" aria-labelledby="modalTitulo" class="modal">
+      <span id="modalTitulo" class="titulo-puntos">Puntos Premia</span>
+      <div>Espera pronto más noticias sobre este programa de recompensas</div>
+      <button class="boton-modal" onclick="cerrarModal()">Aceptar</button>
+      <!-- <button class="boton-modal" onclick="cerrarModal()">Cancelar</button> -->
+    </div>
+  </div>
+ <!-- <button id="abrirModal">Abrir Modal</button> -->
+
+   <!-- Modal Estilos Musicales -->
+  <div id="overlay-estilos">
+    <div id="modal-estilos" role="dialog" aria-labelledby="modalTituloEstilos" class="modal-estilos">
+      <span id="modalTituloEstilos" class="titulo-estilos">Estilos Musicales</span>
+      <div>
+        <p style="text-align: left; font-weight: 700; color: var(--azul)">Catláogo esencial:</p>
+        Balada, Pop, Rock, Infantil/Festivo, Bolero, Cumbia, Bachata, Mariachi, Norteño y Reguetón
+        <br><div class="BRChico"></div>
+        <p style="text-align: left; font-weight: 700; color: var(--azul)">Catláogo extendido:</p>
+        Corridos, Electrónica, Metal, Ska, Calypso, Country, Rock 60s, Disco 70s, Cinemática, Chill y Gospel
+      </div>
+      <button class="boton-modal-estilos" onclick="cerrarModalEstilos()">Aceptar</button>
+    </div>
+  </div>
+
+
+ <!-- Pie de página -->
   <footer>
-    <p>&copy; 2025 Keiware Music. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Keiware Music. Todos los derechos reservados &nbsp;·&nbsp; <span class="pie-keiwaremexico">Sitio diseñado y desarrollado por:<a href="https://www.facebook.com/keiware" target="_blank">Keiware México</a></span></p>
     <p>
-      <a href="politica-privacidad.html">Política de Privacidad</a> •
-      <a href="#">Términos de Servicio</a> •
-      <a href="#">Aviso de Cookies</a>
+      <a href="aviso-privacidad.html" target="_blank">Aviso de Privacidad</a> •
+      <span id="abrirModal" class="link-puntos">Programa Puntos Premia</span> •
+      <a href="aviso-privacidad.html#cookies" target="_blank">Aviso de Cookies</a>
     </p>
   </footer>
-
   <!-- Scripts -->
-  <script src="js/script.js?v=2"></script>
+  <script>
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navMenu");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    }
+  </script>  
+  <script src="js/script.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html>

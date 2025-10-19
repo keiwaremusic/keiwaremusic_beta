@@ -1,0 +1,151 @@
+.artistas-fundadores {
+  width: 100%;
+}
+
+.panel-derecho {
+    flex: 1;
+    padding: 20px;
+    background-color: #54f4f4;
+    overflow-y: auto;
+  }
+
+  .artist-info {
+    display: none;
+  }
+
+  .artist-info.active {
+    display: block;
+  }
+  
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.artist-thumb {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  width: 100%;
+}
+
+.artist-thumb:hover {
+  transform: scale(1.05);
+}
+
+#artist-detail {
+  margin-top: 2rem;
+  padding: 1rem;
+  /* border-top: 3px solid #ccc; */
+  background-color: gray;
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#artist-detail.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .artist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  #artist-detail {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  #detail-photo {
+    width: 100%;
+    height: auto;
+  }
+  .logo-singers {
+    width: 100%;
+  }
+
+}
+
+#detail-audio-container p {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#artist-detail.fading-out {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tabla-artistas {
+  display: flex;
+  margin: 60px auto;
+  padding: 0 20px;
+  align-items: center;
+  width: 1150px;
+  border: 1px solid white;  
+}
+
+.tabla-artistas h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, var(--azul) 0%, var(--rosa) 100%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(46, 126, 252, 0.15);
+  gap: 18px; /* espacio entre viñeta e h2 */
+}
+
+.panel-izquierdo {  /* Cuadrícula de Artistas */
+  min-width: 380px;
+  max-height: 100vh;
+  width: 380px;
+  height: 480px;
+  background-color: #111;
+  padding: 5px;
+  overflow-y: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 110px);
+/*      flex-direction: column; */
+  gap: 5px;
+	box-sizing: border-box;
+	align-items: flex-start;
+}
+.panel-izquierdo img {
+  cursor: pointer;
+  border-radius: 8px;
+  width: 110px;
+  padding: 5px;
+  max-width: 110px;
+  box-shadow: 0 4px 16px rgba(46, 126, 252, 0.15);  
+}
+
+.panel-izquierdo img:hover    {
+    box-shadow: 0 4px 16px rgba(61, 136, 255, 0.527);
+    scale: 1.1;
+    transition: all 0.2s;
+    }
+
+
+.panel-derecho {  
+  width: 350px;
+  flex: 1;
+  padding: 20px;
+  background-color: #54f4f4;
+  overflow-y: auto;
+  min-height: 200px;
+}
