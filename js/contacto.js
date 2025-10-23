@@ -18,10 +18,10 @@ const contactoHTML = `
         <h3>443 614 7779</h3>
       </div>
       <div class="columnac" style="flex-basis: 100%; max-width: 100%;">
-        <a href="#"><img src="img/viñetas/ico_facebook.png">Facebook</a>
-        <a href="#"><img src="img/viñetas/ico_instagram.png">Instagram</a>
-        <a href="#"><img src="img/viñetas/ico_tiktok.png">TikTok</a>
-        <a href="#"><img src="img/viñetas/ico_youtube.png">YouTube</a>
+        <a href="https://www.facebook.com/keiwaremusic" target="_blank"><img src="img/viñetas/ico_facebook.png">Facebook</a>
+        <a href="https://www.instagram.com/keiwaremusic" target="_blank"><img src="img/viñetas/ico_instagram.png">Instagram</a>
+        <a href="https://www.tiktok.com/@keiwaremusic" target="_blank"><img src="img/viñetas/ico_tiktok.png">TikTok</a>
+        <a href="https://www.youtube.com/@KeiwareMusic" target="_blank"><img src="img/viñetas/ico_youtube.png">YouTube</a>
       </div>
     </section>
   </section>
